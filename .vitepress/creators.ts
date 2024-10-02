@@ -16,7 +16,7 @@ export interface Creator {
   emailAliases?: string[]
 }
 
-const getAvatarUrl = (name: string) => `https://github.com/${bingran-li}.png`
+const getAvatarUrl = (name: string) => `https://github.com/${name}.png`
 
 export const creators: Creator[] = [
   {
