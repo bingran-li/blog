@@ -21,15 +21,15 @@ const getAvatarUrl = (name: string) => `https://github.com/${name}.png`
 export const creators: Creator[] = [
   {
     name: '李炳然',
-    avatar: '？',
-    username: 'nekomeowww',
+    avatar: '',
+    username: 'bingran-li',
     title: '查拉图斯特拉(Zarathustra)',
     desc: '专注于科学、技术的学习、创造与实践',
     links: [
       { type: 'github', icon: 'github', link: 'https://github.com/bingran-li' },
     ],
     nameAliases: ['bingranli', 'bingran-li', 'Zarathustra', '查氏的金蛇', 'bingran li'],
-    emailAliases: ['neko@ayaka.moe'],
+    emailAliases: ['noch_zarathustra@outlook.com'],
   },
 ].map<Creator>((c) => {
   c.avatar = c.avatar || getAvatarUrl(c.username)
