@@ -5,7 +5,7 @@ comment: true
 #CS
 
 课程官网：[Home | CS 189/289A (eecs189.org)](https://eecs189.org/)
-# Day1
+# Day1 (2024/10/3)
 - [x] lecture 5 linear regression 2
 ## regularization
 feature selection/add constraints
@@ -30,8 +30,10 @@ A prior for small weights ([[Q]]: What's the meaning?) yields [[#^5b9cfc|L2 regr
 ### Obtain the MAP/L2 Solution
 $w_{L_2}=argmin_{w} (y-Aw)^T(y-Aw)+\lambda ||w||_2^2$
 Take partial derivative([[Q]] how to do it?) and set to zero.
-$w_{L_2}=(A^TA+\lambda I)^{-1}A^Ty.$ (If $\lambda \>0$ we can invert the above.)
->[!remark]
+$w_{L_2}=(A^TA+\lambda I)^{-1}A^Ty.$ (If $\lambda \>0$ we can invert the above.)??
+>[!note] Remark
 >$A$ is "design matrix" or data matrix.
 >When the features in data set are independent, A has full column rank, and $A^TA$ has full rank.
+
+
 
