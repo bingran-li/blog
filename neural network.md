@@ -1,0 +1,3 @@
+---
+aliases: NN, Neural Network
+---

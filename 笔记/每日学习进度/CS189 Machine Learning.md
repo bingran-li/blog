@@ -5,9 +5,10 @@ comment: true
 #CS #ML 
 
 课程官网：[Home | CS 189/289A (eecs189.org)](https://eecs189.org/)
-# Day1 (2024/10/3)
+# [[regularization]]
+#2024/10/3 
 - [x] lecture 5 linear regression 2
-## regularization
+
 feature selection/add constraints
 Issue: there are infinity numbers of $w_{MLE}$ solutions. (By directly computation, or use graph to illustrate). We need to pick one. Criteria: Choose the $\hat{w}$ with the smallest norm.
 MLE yields a point estimate of our parameter through maximize $p(D|\theta)$. It may be not good.
@@ -42,5 +43,39 @@ use $L_1$ norm, which tends to induce sparse $w$.
 It also corresponds to Laplace prior.
 
 
-## Logistic Regression
+# Logistic Regression
+#2024/10/4 
+- [x] lecture 6
+The output is not a real number, but a **label**.
+## Procedure
+- class-conditional probabilities is assumed to be know $p(x|0)$, $p(x|1)$.
+- Use [[Bayes]] rule to go from class-conditional prob to the posterior probability: $p(0|x)$, $p(1|x)$.
+- pick $k$ such that $p(k|x)$ is maximal, which minimize the probability of misclassification:
+$$p(error)=\int p(error|x)p(x)dx$$
+Issue: the consequences of false negatives are much worse than false positives.
 
+## three ways of building classifiers:
+- Generative
+	- model the class-conditional prob
+	- model the prior $p(k)$
+	- obtain posteriors
+- Discriminative: model $p(k|x)$ explicitly
+- Find decision boundaries $f:\mathscr{X}\rightarrow \{0,1,\dots,K-1\}$
+
+
+## [[logistic]] regression
+### Binary output
+Model the posterior probability by a logistic function
+$p(k=0|x)=\frac{1}{1+exp^{-(\theta_1 x+\theta_0)}}$.(1D)
+
+The reason of choosing this function:
+- Given the $p(x|k)$ Gaussian with the same variance, the posterior is a logistic function of an affine transformation of $x\in \mathbb{R}^{d}$.
+
+### [[Q]] odds?
+$p/(1-p) \in [0,\infty)$
+$\log p/(1-p) \in (-\infty,\infty)$
+Now we can have a linear model for the log-odds:
+$$logit (p)=\theta^Tx+\theta_0.$$
+To be continue... MLE of $\theta$.
+
+# 
