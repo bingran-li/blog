@@ -78,4 +78,19 @@ Now we can have a linear model for the log-odds:
 $$logit (p)=\theta^Tx+\theta_0.$$
 To be continue... MLE of $\theta$.
 
-# 
+# Linear Regression
+
+^3cb361
+
+## Inference stage
+we get [[Maximum Likelihood Estimator]] from the [[error function]].
+## Decision stage
+In [[decision theory]], we need a point estimator $f(x)$ rather than a distribution $p(t|x)$. We can derive the point estimator by minimizing a square-[[loss function]]:
+$$L(f(x),t)=(f(x)-t)
+$$$$
+min_{f(x)} E[L]$$
+
+
+## The Bias–Variance Trade-off
+[[Q]]: Suppose we had a large number of data sets each of size $N$ and each drawn independently from the distribution $p(t, x)$. For any given data set $D$, we can run our learning algorithm and obtain a prediction function $f(x; D).$
+What is the mathematical formulation?

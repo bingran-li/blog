@@ -10,9 +10,10 @@ tags:
 # Deep Leaning Overview
 ## Data+Algorithm+Model (High-level decomposition)
 
-# Error Decomposition (Mid-level)
+## Error Decomposition (Mid-level)
 [[test error]]= training error + generalization gap
 	=representation error + optimization error + generalization gap
+
 ## [[neural network|Neural Network]] Optimization (Low-level decomposition)
 Day 1 #2024/10/4 
 ### Two issues: 
@@ -50,3 +51,12 @@ Initialization & [[regularization]]: make the path of optimization lie on a good
 	- compute NTK's spectrum
 	- compute the metric of expressiveness
 
+
+# Model
+Learning a map $f_{\theta}$
+## [[loss function]]
+in deep learning, we minimize a loss consisting of a bunch of  loss function.
+[[Q]]: the difference between the error and loss function in  [[CS189 Machine Learning#^3cb361|linear regression]] and the loss here.
+
+
+# [[initialization]]
