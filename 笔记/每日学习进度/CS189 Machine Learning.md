@@ -81,7 +81,6 @@ To be continue... MLE of $\theta$.
 # Linear Regression
 
 ^3cb361
-
 ## Inference stage
 we get [[Maximum Likelihood Estimator]] from the [[error function]].
 ## Decision stage
@@ -94,3 +93,20 @@ min_{f(x)} E[L]$$
 ## The Bias–Variance Trade-off
 [[Q]]: Suppose we had a large number of data sets each of size $N$ and each drawn independently from the distribution $p(t, x)$. For any given data set $D$, we can run our learning algorithm and obtain a prediction function $f(x; D).$
 What is the mathematical formulation?
+
+---
+# Multivariate Normal
+$Y=AX+\mu$, $A=QD^{1/2}$, $\Sigma=AA^T$ 
+X follows $N(0,I)$, The contour line (level set) is a unit sphere. Then $Y$ is an ellipse.
+Y is a vector with basis $q_1, q_2$ and coordinates $x_1, x_2$.
+The whole vector space is transformed by A.
+
+## Sphering an ellipse
+$x^TAx=1$, $A=QDQ^T$. Let $y= Q^Tx$. Then $y^TDy=1$.
+
+## Quadratic Form
+$X^tAX=X^TPDP^TX=X'DX'$, $X'=P^TX$
+when $X'=e_1$, $X=p_1$, that is the new $X'_1$ axis.
+
+---
+# 
