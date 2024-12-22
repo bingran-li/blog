@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "Hi! This is Bingran's Meditations"
   text: "Blog"
-  tagline: Keep Thingking
+  tagline: Keep Thinking
   actions:
     - theme: brand
       text: Begin
@@ -19,9 +19,10 @@ hero:
 
 features:
   - title: Mathematics
-	  details: hh
+    details: hh
 	  icon: 🌈
-
+  - title: Philosophy
+    details: so?
 
 ---
 
