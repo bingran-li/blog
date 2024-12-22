@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "markdown-examples.md",
+                "file": "index.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "markdown-examples"
+              "title": "index"
             }
           }
         ]
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "markdown-examples.md",
+                "file": "index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for markdown-examples"
+              "title": "Backlinks for index"
             }
           },
           {
@@ -112,12 +112,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "markdown-examples.md",
+                "file": "index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from markdown-examples"
+              "title": "Outgoing links from index"
             }
           },
           {
@@ -139,10 +139,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "markdown-examples.md"
+                "file": "index.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of markdown-examples"
+              "title": "Outline of index"
             }
           }
         ]
@@ -164,8 +164,8 @@
   },
   "active": "23e44f9ce8a1dde1",
   "lastOpenFiles": [
+    "markdown-examples.md",
     "index.md",
-    "api-examples.md",
-    "markdown-examples.md"
+    "api-examples.md"
   ]
 }
