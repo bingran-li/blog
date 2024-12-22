@@ -1,0 +1,16 @@
+# Node.js dependencies
+node_modules/
+
+# macOS system files
+.DS_Store
+
+# VitePress build output
+dist/
+dist-ssr/
+
+# VitePress cache
+.cache/
+.temp/
+
+# Local environment files
+*.local
