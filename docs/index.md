@@ -18,14 +18,10 @@ hero:
       link: https://github.com/bingran-li
 
 features:
-  - title: 数学
-	  details: 人脑处理不了的就交给计算机吧。
+  - title: Mathematics
+	  details: hh
 	  icon: 🌈
-	- title: 哲学
-	  details: 怎么谈论哲学？与愿意倾听的伙伴们。
-	  icon: 📃
-	- title: 杂谈
-	  details: 冷眼旁观
-	  icon: 🗃
+
+
 ---
 
