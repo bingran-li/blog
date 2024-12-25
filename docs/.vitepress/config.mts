@@ -11,18 +11,40 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: 'Examples', link: '/markdown-examples' },
+      { text: 'Inspiration', link: '/inspiration/' },
+      { text: 'Notes', link: '/notes/' }
     ],
 
-    sidebar: [
-      {
-        text: 'Examples',
-        items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
-        ]
-      }
-    ],
+    sidebar: {
+      '/markdown-examples': [
+        {
+          text: 'Examples',
+          items: [
+            { text: 'Markdown Examples', link: '/markdown-examples' },
+            { text: 'Runtime API Examples', link: '/api-examples' }
+          ]
+        }
+      ],
+
+      '/inspiration/': [
+        {
+          text: 'Inspritation',
+          items: [
+            { text: '1', link: '/inspiration/Notes' }
+          ]
+        }
+      ],
+
+      '/notes/': [
+        {
+          text: 'Notes',
+          items: [
+            { text: '2024 Fall Archive', link: '/notes/2024 Fall Archive' }
+          ]
+        }
+      ]
+    },
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' }

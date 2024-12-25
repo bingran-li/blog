@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "notes/2024 Fall Archive.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "2024 Fall Archive"
             }
           }
         ]
@@ -164,8 +164,11 @@
   },
   "active": "23e44f9ce8a1dde1",
   "lastOpenFiles": [
+    "inspiration/Notes.md",
+    "notes/2024 Fall Archive.md",
+    "api-examples.md",
     "markdown-examples.md",
-    "index.md",
-    "api-examples.md"
+    "inspiration",
+    "index.md"
   ]
 }
