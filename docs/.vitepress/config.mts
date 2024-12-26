@@ -1,4 +1,16 @@
 import { defineConfig } from 'vitepress'
+import { sidebar } from './sidebar';
+import mathjax3 from 'markdown-it-mathjax3'
+
+
+const customElements = [
+  'math', 'mi', 'mn', 'mo', 'ms', 'mspace', 'mtext',
+  'menclose', 'merror', 'mfenced', 'mfrac', 'mpadded',
+  'mphantom', 'mroot', 'mrow', 'msqrt', 'mstyle',
+  'mmultiscripts', 'mover', 'mprescripts', 'msub',
+  'msubsup', 'msup', 'munder', 'munderover',
+  'semantics', 'annotation', 'annotation-xml',
+];
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -11,41 +23,10 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' },
-      { text: 'Inspiration', link: '/inspiration/' },
-      { text: 'Notes', link: '/notes/' }
+      { text: 'Inspiration', link: '/inspiration' },
+      { text: 'Notes', link: '/notes' }
     ],
-
-    sidebar: {
-      '/markdown-examples': [
-        {
-          text: 'Examples',
-          items: [
-            { text: 'Markdown Examples', link: '/markdown-examples' },
-            { text: 'Runtime API Examples', link: '/api-examples' }
-          ]
-        }
-      ],
-
-      '/inspiration/': [
-        {
-          text: 'Inspritation',
-          items: [
-            { text: '1', link: '/inspiration/Notes' }
-          ]
-        }
-      ],
-
-      '/notes/': [
-        {
-          text: 'Notes',
-          items: [
-            { text: '2024 Fall Archive', link: '/notes/2024 Fall Archive' }
-          ]
-        }
-      ]
-    },
-
+    sidebar,
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
     ],
@@ -121,5 +102,22 @@ export default defineConfig({
       },
     },
 
-  }
+  },
+  
+  markdown: {
+    math: true, // 启用数学公式支持
+    config: (md) => {
+      // 使用 markdown-it-mathjax3 插件
+      md.use(mathjax3);
+    },
+  },
+  vue: {
+    template: {
+      compilerOptions: {
+        // 允许自定义 MathJax 的 HTML 元素
+        isCustomElement: (tag) => customElements.includes(tag),
+      },
+    },
+  },
 })
+
