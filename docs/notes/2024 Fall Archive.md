@@ -1,4 +1,4 @@
-This is a summary of fall term in 2024. I spent four months on 6 courses. I will record what I have learnt from them, not in a style of notes. I have finished the following six courses:
+This is a summary of fall term in 2024. I spent four months on 6 courses. I will write down what I have learnt from them, but not in a style of notes or evaluation. I have finished the following six courses:
 DDA6020 *Measure Theoretic Probability*
 DDA6202 *Optimization in Machine Learning*
 DDA6204 *Numerical Linear Algebra*
@@ -7,8 +7,18 @@ MAT4220 *Partial Differential Equations*
 GEC2206 *Global Political Economy*
 
 # The purpose of selecting those courses.
-Depth is the core of course selections in undergraduate period. When I was year 2, I learnt financial mathematics, and therefore I'm familiar with probability theory and stochastic calculus. I have to strengthen my understanding on them, so I choose *Measure Theoretic Probability*, which is an advanced proof-based courses. Eventually, it indeed reshapes my mind, and provides a rigorous foundation on what I often use. I will give examples in the section of this course.
+Width is the core of course selections in undergraduate period. Open-mindedness is my feature on 
 
-To push the boundary of my ability, I choose *Numerical Linear Algebra*, which is a very practical courses, compared to other algebra courses. It takes an important role in modern computer science and applied mathematics. There is a saying that, everybody loves machine learning, but they don't know linear algebra. This implies I must learn linear algebra well, rather than only learn those popular things, like neural networks. More importantly, we learn the concept of eigenvalue in linear algebra, but we even do not know how to get them in real problems. Numerical Linear Algebra tells us, we cannot get them directly in general case, and we can only use iterative algorithms to approximate the eigenvalues of a matrix, like **Arnoldi iteration** and **QR Algorithm**.
+To strengthen my understanding of probability. When I was year 2, I learnt financial mathematics, and therefore I'm familiar with probability theory and stochastic calculus. So I choose *Measure Theoretic Probability*, which is an advanced proof-based courses. Prof. Yao has great understanding on probability and he convey it to us. Eventually, it indeed reshapes my mind, and provides a more rigorous foundation on what I often use. I will give examples in the section of this course.
 
+To push the boundary of my ability, I choose *Numerical Linear Algebra*, which is a very practical courses, compared to other algebra courses. Prof. Hongyuan Zha provides this course, which takes an important role in modern computer science and applied mathematics. There is a saying that, everybody loves machine learning, but they don't know linear algebra. This implies I must learn linear algebra well, rather than only learn those popular things, like neural networks. More importantly, even though we learn the concept of eigenvalue in linear algebra, we do not know how to get them in real problems. Numerical Linear Algebra tells us that we cannot find them directly in general case, and we can only use iterative algorithms to approximate the eigenvalues of a matrix, like **Arnoldi iteration** and **QR Algorithm**.
 
+To catch up the state of the art, I choose *Optimization in Machine Learning*, by Prof. Ruoyu Sun. This is an unique course in the world. He does not focus on basic knowledge of machine learning and deep learning. He teaches us mindset on how to think about them from essential perspective. For example, I learnt how to **diagnosis** a neural network from the basic elements, namely, initialization, backpropagation and so on. I also learnt to think as an optimization people: find **formulation of problems** first.
+
+ *Real Analysis* and *Partial Differential Equations* are fundamental courses in mathematics. I will not do research on them.
+
+*Global Political Economy* is a modelling of the interaction of politics and economy of the world. No too much quantitative method is used in this course. It's more mysterious than mathematics.
+
+I'm wondering whether my words are too abstract and redundant. But I think I have to describe professor and course content in this way, otherwise it is hard to read.
+
+# Measure Theoretic Probability
