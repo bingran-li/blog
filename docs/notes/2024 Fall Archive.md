@@ -7,7 +7,7 @@ MAT4220 *Partial Differential Equations*
 GEC2206 *Global Political Economy*
 
 # The purpose of selecting those courses.
-Width is the core of course selections in undergraduate period. Open-mindedness is my feature on 
+Width is the core of course selections in undergraduate period.
 
 To strengthen my understanding of probability. When I was year 2, I learnt financial mathematics, and therefore I'm familiar with probability theory and stochastic calculus. So I choose *Measure Theoretic Probability*, which is an advanced proof-based courses. Prof. Yao has great understanding on probability and he convey it to us. Eventually, it indeed reshapes my mind, and provides a more rigorous foundation on what I often use. I will give examples in the section of this course.
 
@@ -22,3 +22,4 @@ To catch up the state of the art, I choose *Optimization in Machine Learning*, b
 I'm wondering whether my words are too abstract and redundant. But I think I have to describe professor and course content in this way, otherwise it is hard to read.
 
 # Measure Theoretic Probability
+.
