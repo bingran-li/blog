@@ -18,6 +18,10 @@ export const sidebar = {
         {
           text: '2024 Fall Archive',
           link: '/notes/2024 Fall Archive'
+        },
+        {
+          text: 'CS106B',
+          link: '/notes/CS106B'
         }
       ]
     }
