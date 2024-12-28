@@ -22,6 +22,9 @@ To catch up the state of the art, I choose *Optimization in Machine Learning*, b
 I'm wondering whether my words are too abstract and redundant. But I think I have to describe professor and course content in this way, otherwise it is hard to read.
 
 # Measure Theoretic Probability
+
+```
 The core is to understand what is the meaning of **measurable random variable**, and why we are interested in (square) **integrable random variable**. For $f: (E,\mathcal{E})\rightarrow (F, \mathcal{F})$, we define that function is measurable if and only if it's pre-image $f^{-1}(A)$ is in $\mathcal{E}$ for all $A$ in $\mathcal{F}$. For direct explanation, we deal with random variable, which is a function maps from a space $\Omega$ (e.g. $\mathbb{R}$), to $\mathbb{R}$. The key feature is that, its output space is real field $\mathbb{R}$, hence we can talk about **integrability** of it.
 $X: (\Omega,\mathcal{F})\rightarrow (\mathbb{R}, \mathcal{B})$.
 
+```
