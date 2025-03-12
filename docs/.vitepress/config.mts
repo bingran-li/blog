@@ -16,7 +16,7 @@ const customElements = [
 export default defineConfig({
   title: "Bingran's blog",
   description: "Personal Blog",
-  base: "/",
+  base: "/blog/", //我使用github pages部署，子路径。
   themeConfig: {
     outlineTitle: "Content",
     outline: [2, 6],
