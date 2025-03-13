@@ -9,7 +9,7 @@ modified: 2025-03-13
 ---
 # 
 Book:
-- [Computational Complexity: A Modern Approach](https://theory.cs.princeton.edu/complexity/book.pdf)
+- [Computational Complexity: A Modern Approach](https://theory.cs.princeton.edu/complexity/book.pdf)![image](/bfda3025cd9bce79d16c1fe1a9431b8.jpg)
 - [The Nature Of Computation](https://nature-of-computation.org/~moore/noc/index.php)
 
 - 为什么学习计算复杂度？ #2025/3/12
