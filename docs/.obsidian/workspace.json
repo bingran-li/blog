@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "44227d032e8c51e7",
@@ -165,6 +166,8 @@
   },
   "active": "23e44f9ce8a1dde1",
   "lastOpenFiles": [
+    "public/屏幕截图_14-3-2025_151952_.jpeg",
+    "public/屏幕截图_14-3-2025_151952_.jpeg.crdownload",
     "public/bfda3025cd9bce79d16c1fe1a9431b8 1.jpg",
     "public/bfda3025cd9bce79d16c1fe1a9431b8.jpg",
     "notes/Computational Complexity.md",

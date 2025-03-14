@@ -28,11 +28,11 @@ export default defineConfig({
     ],
     sidebar,
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://github.com/bingran-li' }
     ],
 
     footer: {
-      copyright: "Copyright@ 2024 Bingran Li"
+      copyright: "Copyright@ 2025 Bingran Li"
     },
 
     search: {
