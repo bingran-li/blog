@@ -25,7 +25,7 @@ adversary?
 ## Polynomial Matters
 #20253/14
 摩尔定律说，处理速度每两年翻倍，那么一个运行时间为$\Theta(n)$，的算法，如果问题的规模$n$翻倍，速度的翻倍仍然让我能够在相同时间运行这个算法。但是如果一个算法是$\Theta(2^n)$，处理速度翻倍，要想在同样时间运行算法，我们只能让问题的规模$n$加一。
-![](\屏幕截图_14-3-2025_151952_.jpeg) ref: [The Nature Of Computation](https://nature-of-computation.org/~moore/noc/index.php).
+![](/屏幕截图_14-3-2025_151952_.jpeg) ref: [The Nature Of Computation](https://nature-of-computation.org/~moore/noc/index.php).
 sublinear algorithm?
 ## The Nature of A Problem
 判断一个图是否存在Euler's circuit（一次走完所有边edge）这个问题，有一个非常简单的充分必要条件，每个点的度是偶数（除了某两个端点）。而判断一个图是否有哈密顿路径（一次走完所有点vertex），则暂时没有一个简单的充分必要条件。那么我们说，前一个问题比后一个问题，本质上要更难。
