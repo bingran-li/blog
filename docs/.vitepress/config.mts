@@ -14,10 +14,12 @@ const customElements = [
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "Bingran's blog",
-  description: "Personal Blog",
+  title: "Bingran's blog | 李炳然",
+  description: "Mathematics and Philosophy. 数学！哲学！",
   base: "/blog/", //我使用github pages部署，子路径。
   themeConfig: {
+    //logo: ,
+    siteTitle: "Bingran's Blog",
     outlineTitle: "Content",
     outline: [2, 6],
     // https://vitepress.dev/reference/default-theme-config
