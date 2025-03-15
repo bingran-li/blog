@@ -17,6 +17,14 @@ export default defineConfig({
   title: "Bingran's blog | 李炳然",
   description: "Mathematics and Philosophy. 数学！哲学！",
   base: "/blog/", //我使用github pages部署，子路径。
+  head: [
+    ['meta', { property: 'og:title', content: 'Bingran\'s blog | 李炳然的博客' }],
+    ['meta', { property: 'og:description', content: '深入探索数学和哲学' }],
+    //['meta', { property: 'og:image', content: '/blog/og-image.png' }], // 必须配置图片
+    ['meta', { property: 'og:url', content: 'https://bingran-li.github.io/blog/' }],
+    ['meta', { property: 'og:type', content: 'website' }],
+  ],
+
   themeConfig: {
     //logo: ,
     siteTitle: "Bingran's Blog",

@@ -15,7 +15,7 @@ hero:
       link: https://www.xiaohongshu.com/user/profile/5f37dda50000000001003d00?xhsshare=CopyLink&appuid=5f37dda50000000001003d00&apptime=1727880332&share_id=cc557c62da5d4ce2b8a53952cdba7fbf
     - theme: alt
       text: GitHub 上浏览
-      link: https://github.com/bingran-li
+      link: https://github.com/bingran-li/blog
 
 features:  
   - title: Philosophy
