@@ -14,7 +14,7 @@ const customElements = [
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "Bingran's blog | 李炳然",
+  title: "Bingran's blog | 李炳然的博客",
   description: "Mathematics and Philosophy. 数学！哲学！",
   base: "/blog/", //我使用github pages部署，子路径。
   head: [
