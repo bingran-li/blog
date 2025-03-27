@@ -26,6 +26,10 @@ export const sidebar = {
         {
           text: 'CS106B',
           link: '/notes/CS106B'
+        },
+        {
+          text: 'Resource',
+          link: '/notes/Resource'
         }
       ]
     }
