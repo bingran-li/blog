@@ -29,7 +29,7 @@ export default defineConfig({
     //logo: ,
     siteTitle: "Bingran's Blog",
     outlineTitle: "Content",
-    outline: [2, 6],
+    outline: [1, 6],
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
@@ -129,5 +129,6 @@ export default defineConfig({
       },
     },
   },
+
 })
 

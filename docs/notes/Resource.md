@@ -1,12 +1,14 @@
 # Reading Group
--  
-![Analytic Number Theory, Spring 2025:](/Analytic_Number_Theory_ReadingGroup_2025_2_11.pdf)
+
+**Analytic Number Theory, Spring 2025**:
+<object data="/blog/Analytic_Number_Theory_ReadingGroup_2025_2_11.pdf" type="application/pdf" width="100%" height="600px">
+  <p>It appears you don't have a PDF plugin for this browser.
+  You can <a href="/blog/Analytic_Number_Theory_ReadingGroup_2025_2_11.pdf">click here to download the PDF file.</a></p>
+</object>
 
 # In Dialogue with Nature 
-reflective journal on science and congnition
-李炳然（122020087）
-
-GFN1000 与自然对话
+Reflective journal on *Science and Cognition*
+GFN1000 *与自然对话*
 
 2024年4月6日
 

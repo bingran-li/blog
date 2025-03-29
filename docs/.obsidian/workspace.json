@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "44227d032e8c51e7",
@@ -167,15 +168,16 @@
   "lastOpenFiles": [
     "notes/Computational Complexity.md",
     "notes/Resource.md",
+    "notes/index.md",
+    "notes/CS106B.md",
+    "public/Analytic_Number_Theory_ReadingGroup_2025_2_11.pdf",
     "public/屏幕截图_14-3-2025_151952_.jpeg",
     "public/屏幕截图_14-3-2025_151952_.jpeg.crdownload",
     "public/bfda3025cd9bce79d16c1fe1a9431b8 1.jpg",
     "public/bfda3025cd9bce79d16c1fe1a9431b8.jpg",
-    "notes/CS106B.md",
     "public",
     "新建文件夹",
     "notes/2024 Fall Archive.md",
-    "notes/index.md",
     "inspiration/Notes.md",
     "inspiration/index.md",
     "api-examples.md",
