@@ -13,7 +13,7 @@ modified: 2025-03-31
 # The Problems
 d维空间中最多可以塞下多少个单位向量？
 The main problem here is that *the maximum number of almost orthogonal unit vectors in Rd*. The following notes are some knowledge I feel very interesting when I was exploring the main problem. And the **simplified conclusion** of the main problem is:
-- If $\epsilon =1 $, $m$ can be arbitrarily large.
+- If $\epsilon =1$, $m$ can be arbitrarily large.
 - If $\epsilon$ is in $[\frac{1}{2}, 1)$, $M$ is exponential in $d$. The upper bound of $m$ is in form of $c (1-\epsilon)^{-d/2}$ for some absolute constant $c$, which can be derived from volumn argument on spherical cap. We will prove it later.
 - If $\epsilon$ is in $[\frac{1}{2\sqrt{d}}, \frac{1}{2}]$, $M$ is exponential in dimension $d$. The upper bound of $m$ is in form of $e^{c \epsilon^2 (\log\frac{1}{\epsilon}) d}$ for some absolute constant $c$,  following from the result of Noga Alon's Theorem 9.3 on the high rank of perturbations of the identity matrix \citep{alon2003problems}.
 - If $\epsilon$ is in $[0, \frac{1}{2\sqrt{d}}]$, $M$ is polynomial in dimension $d$. The minimum of $\epsilon$ that allows $m=d+1$ is $\frac{1}{d}$ (in this case, those vectors form a regular simplex centered at the origin, which is also a equiangular tight frame).
