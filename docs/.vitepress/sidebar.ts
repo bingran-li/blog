@@ -28,6 +28,10 @@ export const sidebar = {
           link: '/notes/CS106B'
         },
         {
+          text: 'Probability in Combinatorics',
+          link: '/notes/Probability in Combinatorics'
+        },
+        {
           text: 'Resource',
           link: '/notes/Resource'
         }

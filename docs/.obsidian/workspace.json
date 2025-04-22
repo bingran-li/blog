@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/Resource.md",
+                "file": "notes/Probability in Combinatorics.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Resource"
+              "title": "Probability in Combinatorics"
             }
           }
         ]
@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "44227d032e8c51e7",
@@ -166,8 +165,16 @@
   },
   "active": "23e44f9ce8a1dde1",
   "lastOpenFiles": [
-    "notes/Computational Complexity.md",
+    "public/20250422085931.png",
+    "notes/Probability in Combinatorics.md",
+    "public/20250422085549.jpg",
+    "public/midreportBingranLi.pdf",
     "notes/Resource.md",
+    "notes/Computational Complexity.md",
+    "notes/2024 Fall Archive.md",
+    "4.md",
+    "pasted.md",
+    "Pasted.md",
     "notes/index.md",
     "notes/CS106B.md",
     "public/Analytic_Number_Theory_ReadingGroup_2025_2_11.pdf",
@@ -177,7 +184,6 @@
     "public/bfda3025cd9bce79d16c1fe1a9431b8.jpg",
     "public",
     "新建文件夹",
-    "notes/2024 Fall Archive.md",
     "inspiration/Notes.md",
     "inspiration/index.md",
     "api-examples.md",
