@@ -45,6 +45,14 @@ export default defineConfig({
       copyright: "Copyright@ 2025 Bingran Li"
     },
 
+    lastUpdated: {
+      text: 'Updated at',
+      formatOptions: {
+        dateStyle: 'full',
+        timeStyle: 'medium'
+      }
+    },
+
     search: {
       provider: 'local',
       options: {
@@ -112,6 +120,7 @@ export default defineConfig({
       },
     },
 
+    
   },
   
   markdown: {
