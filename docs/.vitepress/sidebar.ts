@@ -34,6 +34,10 @@ export const sidebar = {
         {
           text: 'Resource',
           link: '/notes/Resource'
+        },
+        {
+          text: '《哲学的问题》',
+          link: '/notes/《哲学的问题》'
         }
       ]
     }

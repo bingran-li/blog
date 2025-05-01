@@ -16,6 +16,9 @@ hero:
     - theme: alt
       text: GitHub 上浏览
       link: https://github.com/bingran-li/blog
+    - theme: brand
+      text: 加入群组/Join Group
+      link: /groups.md
 
 features:  
   - title: Philosophy
