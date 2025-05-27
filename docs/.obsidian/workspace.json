@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/Probability in Combinatorics.md",
+                "file": "CV.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Probability in Combinatorics"
+              "title": "CV"
             }
           }
         ]
@@ -166,18 +166,23 @@
   "active": "23e44f9ce8a1dde1",
   "lastOpenFiles": [
     "groups.md",
-    "public/20250422085931.png",
+    "index.md",
     "notes/Probability in Combinatorics.md",
+    "notes/Resource.md",
+    "notes/index.md",
+    "notes/CS106B.md",
+    "CV.md",
+    "public/BingranLi_CV&TSR.pdf",
+    "Papers - Global Political Economy.md",
+    "notes/Computational Complexity.md",
+    "6.md",
+    "public/20250422085931.png",
     "public/20250422085549.jpg",
     "public/midreportBingranLi.pdf",
-    "notes/Resource.md",
-    "notes/Computational Complexity.md",
     "notes/2024 Fall Archive.md",
     "4.md",
     "pasted.md",
     "Pasted.md",
-    "notes/index.md",
-    "notes/CS106B.md",
     "public/Analytic_Number_Theory_ReadingGroup_2025_2_11.pdf",
     "public/屏幕截图_14-3-2025_151952_.jpeg",
     "public/屏幕截图_14-3-2025_151952_.jpeg.crdownload",
@@ -189,7 +194,6 @@
     "inspiration/index.md",
     "api-examples.md",
     "markdown-examples.md",
-    "inspiration",
-    "index.md"
+    "inspiration"
   ]
 }
