@@ -7,6 +7,10 @@ export const sidebar = {
         {
           text: 'Notes',
           link: '/inspiration/Notes'
+        },
+        {
+          text: '《哲学的问题》',
+          link: '/inspiration/《哲学的问题》'
         }
       ]
     }
@@ -34,10 +38,6 @@ export const sidebar = {
         {
           text: 'Resource',
           link: '/notes/Resource'
-        },
-        {
-          text: '《哲学的问题》',
-          link: '/notes/《哲学的问题》'
         }
       ]
     }

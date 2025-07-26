@@ -23,11 +23,9 @@ hero:
 features:  
   - title: Philosophy
     details: 怎么谈论哲学？与愿意倾听的伙伴们。
-  - title: Mathematics
-    details: 人脑处理不了的就交给计算机吧。
-  - title: Dream
-    details: ...
-  - title: 杂谈
-    details: 冷眼旁观
+  - title: Interests
+    details: <span style="color:#e91e63;">Philosophy</span> (Nietzsche, Russell, Zhuangzi)<br>  <span style="color:#3f51b5;">Classical Music</span> (Bach, Gould, Lang Lang) <br> Psychology (Jung) Mathematics
+  - title: Poetry
+    details: <i>相与枕藉乎舟中，不知东方之既白。</i>
 ---
 

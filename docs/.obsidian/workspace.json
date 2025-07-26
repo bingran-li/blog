@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Concentration Inequalities-Reading Group.md",
+                "file": "index.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Concentration Inequalities-Reading Group"
+              "title": "index"
             }
           }
         ]
@@ -165,10 +165,19 @@
   },
   "active": "23e44f9ce8a1dde1",
   "lastOpenFiles": [
+    "notes/CS106B.md",
+    "notes/Probability in Combinatorics.md",
+    "notes/index.md",
+    "notes/Computational Complexity.md",
+    "inspiration/index.md",
+    "inspiration/Notes.md",
+    "index.md",
+    "notes/Resource.md",
+    "groups.md",
+    "inspiration/《哲学的问题》.md",
+    "Concentration Inequalities-Reading Group.md",
     "High Dimensional Probability.md",
     "Merton's Problem.md",
-    "Concentration Inequalities-Reading Group.md",
-    "groups.md",
     "Course Project (DDA6202 Optimization in Machine Learning).md",
     "public/concentration_2024_6_25.pdf",
     "public/slides_high_dim.pdf",
@@ -178,12 +187,6 @@
     "public/BingranLi_CV&TSR.pdf",
     "CV.md",
     "Resources",
-    "index.md",
-    "notes/Probability in Combinatorics.md",
-    "notes/Resource.md",
-    "notes/index.md",
-    "notes/CS106B.md",
-    "notes/Computational Complexity.md",
     "6.md",
     "public/20250422085931.png",
     "public/20250422085549.jpg",
@@ -198,8 +201,6 @@
     "public/bfda3025cd9bce79d16c1fe1a9431b8 1.jpg",
     "public/bfda3025cd9bce79d16c1fe1a9431b8.jpg",
     "public",
-    "inspiration/Notes.md",
-    "inspiration/index.md",
     "api-examples.md",
     "markdown-examples.md"
   ]
