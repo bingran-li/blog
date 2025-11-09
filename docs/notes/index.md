@@ -1,5 +1,15 @@
-# 📒 笔记
+# 📒 Notes
 
+## Bingran's Meditations
+
+Welcome to Bingran Li's Meditations — this is the 📒 **Notes** section.
+
+The site's **main purpose** is to use a second brain (the computer) to record knowledge. In the process of learning mathematics one often builds **intuition** and then forgets the concrete **knowledge**. While cultivating mathematical intuition is a success, remembering the trivial details of knowledge remains important. Knowledge is like fragments scattered throughout my brain; I am gradually building a repository in the second brain. Maybe my knowledge also follows the _"scaling law"_, and miracles will be born!
+
+> [!WARNING]  
+> This space will be updated with my daily study notes, including but not limited to: analysis, probability theory, various algebras, and various optimizations. Dear readers, please supervise and provide guidance.
+
+*CN:*
 ## 李炳然的沉思录
 
 欢迎来到李炳然的沉思录，这里是 📒 笔记分区。

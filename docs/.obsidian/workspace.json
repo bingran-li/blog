@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "inspiration/index.md",
                 "mode": "source",
                 "source": false
               },
@@ -155,6 +155,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -165,13 +166,16 @@
   },
   "active": "23e44f9ce8a1dde1",
   "lastOpenFiles": [
+    "notes/index.md",
+    "CV.md",
+    "public/BingranLi_CV&TSR.pdf",
+    "public/midreportBingranLi.pdf",
+    "inspiration/index.md",
+    "index.md",
     "notes/CS106B.md",
     "notes/Probability in Combinatorics.md",
-    "notes/index.md",
     "notes/Computational Complexity.md",
-    "inspiration/index.md",
     "inspiration/Notes.md",
-    "index.md",
     "notes/Resource.md",
     "groups.md",
     "inspiration/《哲学的问题》.md",
@@ -184,13 +188,10 @@
     "public/project6202.pdf",
     "Papers - Global Political Economy.md",
     "public/MertonProblem.pdf",
-    "public/BingranLi_CV&TSR.pdf",
-    "CV.md",
     "Resources",
     "6.md",
     "public/20250422085931.png",
     "public/20250422085549.jpg",
-    "public/midreportBingranLi.pdf",
     "notes/2024 Fall Archive.md",
     "4.md",
     "pasted.md",
