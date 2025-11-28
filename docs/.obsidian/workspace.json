@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "inspiration/index.md",
+                "file": "notes/Incremental Approximation of Covariance Square Root.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "Incremental Approximation of Covariance Square Root"
             }
           }
         ]
@@ -166,11 +166,12 @@
   },
   "active": "23e44f9ce8a1dde1",
   "lastOpenFiles": [
+    "inspiration/index.md",
+    "notes/Incremental Approximation of Covariance Square Root.md",
     "notes/index.md",
     "CV.md",
     "public/BingranLi_CV&TSR.pdf",
     "public/midreportBingranLi.pdf",
-    "inspiration/index.md",
     "index.md",
     "notes/CS106B.md",
     "notes/Probability in Combinatorics.md",

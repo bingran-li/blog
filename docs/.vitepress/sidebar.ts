@@ -32,6 +32,10 @@ export const sidebar = {
           link: '/notes/CS106B'
         },
         {
+          text: 'Incremental Approximation of Covariance Square Root',
+          link: '/notes/Incremental Approximation of Covariance Square Root'
+        },
+        {
           text: 'Probability in Combinatorics',
           link: '/notes/Probability in Combinatorics'
         },
