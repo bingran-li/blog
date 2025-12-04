@@ -36,6 +36,10 @@ export const sidebar = {
           link: '/notes/Incremental Approximation of Covariance Square Root'
         },
         {
+          text: 'Memory Problems In AI',
+          link: '/notes/Memory Problems In AI'
+        },
+        {
           text: 'Probability in Combinatorics',
           link: '/notes/Probability in Combinatorics'
         },

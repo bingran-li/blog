@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/Incremental Approximation of Covariance Square Root.md",
+                "file": "notes/Memory Problems In AI.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Incremental Approximation of Covariance Square Root"
+              "title": "Memory Problems In AI"
             }
           }
         ]
@@ -166,8 +166,11 @@
   },
   "active": "23e44f9ce8a1dde1",
   "lastOpenFiles": [
-    "inspiration/index.md",
+    "public/memory_slides_2025_11_29.pdf",
+    "notes/Resource.md",
+    "notes/Memory Problems In AI.md",
     "notes/Incremental Approximation of Covariance Square Root.md",
+    "inspiration/index.md",
     "notes/index.md",
     "CV.md",
     "public/BingranLi_CV&TSR.pdf",
@@ -177,7 +180,6 @@
     "notes/Probability in Combinatorics.md",
     "notes/Computational Complexity.md",
     "inspiration/Notes.md",
-    "notes/Resource.md",
     "groups.md",
     "inspiration/《哲学的问题》.md",
     "Concentration Inequalities-Reading Group.md",
