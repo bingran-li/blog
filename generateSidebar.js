@@ -5,6 +5,7 @@ const path = require('path');
 const basePaths = {
   '/inspiration/': './docs/inspiration',
   '/notes/': './docs/notes',
+  '/publications/': './docs/publications',
 };
 
 // 动态生成配置

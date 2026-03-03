@@ -1,5 +1,12 @@
 
 export const sidebar = {
+  '/publications/': [
+    {
+      text: 'publications',
+      items: [
+      ]
+    }
+  ],
   '/inspiration/': [
     {
       text: 'inspiration',
