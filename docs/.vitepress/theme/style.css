@@ -137,3 +137,225 @@
   --docsearch-primary-color: var(--vp-c-brand-1) !important;
 }
 
+/**
+ * Academic Homepage
+ * -------------------------------------------------------------------------- */
+
+/* Override VitePress doc layout container width for academic homepage */
+.academic-profile {
+  max-width: 60vw;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Widen VitePress doc layout containers only on homepage */
+/* Use frontmatter class to scope: add `pageClass: academic-page` to index.md */
+.academic-page .VPDoc:not(.has-sidebar) .container,
+.academic-page .VPDoc .container {
+  max-width: none !important;
+}
+
+.academic-page .VPDoc:not(.has-sidebar) .content-container,
+.academic-page .VPDoc .content-container {
+  max-width: none !important;
+}
+
+.academic-page .VPDoc .content {
+  max-width: none !important;
+  padding: 0 48px !important;
+}
+
+/* Profile Header: photo left, info right */
+.profile-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+
+.profile-photo img {
+  width: 180px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.profile-info h1 {
+  margin: 0 0 4px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.profile-info .tagline {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+  color: var(--vp-c-text-2);
+  font-style: italic;
+}
+
+.profile-info .affiliation {
+  margin: 0 0 12px;
+  font-size: 0.95rem;
+  color: var(--vp-c-text-2);
+  line-height: 1.5;
+}
+
+.profile-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.profile-links a {
+  display: inline-block;
+  padding: 4px 12px;
+  font-size: 0.85rem;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 6px;
+  color: var(--vp-c-brand-1);
+  text-decoration: none;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.profile-links a:hover {
+  background-color: var(--vp-c-brand-soft);
+  border-color: var(--vp-c-brand-1);
+}
+
+/* Publication Cards */
+.pub-card {
+  display: flex;
+  gap: 20px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--vp-c-divider);
+}
+
+.pub-card:last-child {
+  border-bottom: none;
+}
+
+.pub-card img {
+  width: 160px;
+  min-width: 160px;
+  height: auto;
+  max-height: 200px;
+  object-fit: contain;
+  border-radius: 8px;
+  border: 1px solid var(--vp-c-divider);
+}
+
+.pub-info {
+  flex: 1;
+}
+
+.pub-info .pub-title {
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 0 0 4px;
+  line-height: 1.4;
+}
+
+.pub-info .pub-authors {
+  font-size: 0.9rem;
+  color: var(--vp-c-text-2);
+  margin: 0 0 4px;
+}
+
+.pub-info .pub-venue {
+  font-size: 0.85rem;
+  color: var(--vp-c-text-3);
+  margin: 0 0 8px;
+  font-style: italic;
+}
+
+.pub-links {
+  display: flex;
+  gap: 6px;
+}
+
+.pub-links a {
+  display: inline-block;
+  padding: 2px 10px;
+  font-size: 0.8rem;
+  border: 1px solid var(--vp-c-brand-1);
+  border-radius: 4px;
+  color: var(--vp-c-brand-1);
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.pub-links a:hover {
+  background-color: var(--vp-c-brand-1);
+  color: #fff;
+}
+
+/* Section headings */
+.academic-profile h2 {
+  border-bottom: 2px solid var(--vp-c-brand-1);
+  padding-bottom: 6px;
+  margin-top: 36px;
+}
+
+/* Teaching list */
+.academic-profile ul.teaching-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.academic-profile ul.teaching-list li {
+  padding: 4px 0;
+  border-bottom: 1px solid var(--vp-c-divider);
+}
+
+.academic-profile ul.teaching-list li:last-child {
+  border-bottom: none;
+}
+
+/* Research interests keywords */
+.research-keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.research-keywords span {
+  display: inline-block;
+  padding: 4px 14px;
+  font-size: 0.88rem;
+  background-color: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand-1);
+  border-radius: 16px;
+}
+
+/* Responsive: mobile */
+@media (max-width: 640px) {
+  .profile-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-links {
+    justify-content: center;
+  }
+
+  .pub-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .pub-card img {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+  }
+
+  .pub-links {
+    justify-content: center;
+  }
+}
+

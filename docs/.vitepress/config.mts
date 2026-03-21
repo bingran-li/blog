@@ -14,21 +14,27 @@ const customElements = [
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "Bingran's blog | 李炳然的博客",
-  description: "Mathematics and Philosophy. 数学！哲学！",
-  base: "/blog/", //我使用github pages部署，子路径。
+  lang: 'en-US',
+  title: "Bingran Li - Academic Homepage",
+  description: "Bingran Li is an undergraduate student in Mathematics at CUHK-Shenzhen, working on optimization theory, Adam convergence, and mathematical foundations of machine learning.",
+  base: "/blog/",
   head: [
     ['meta', { name: 'google-site-verification', content: 'XSwq30RrSz3qsEb98KeDPw9PVqXha8FxZMexasVxEgo' }],
-    ['meta', { property: 'og:title', content: 'Bingran\'s blog | 李炳然的博客' }],
-    ['meta', { property: 'og:description', content: '深入探索数学和哲学' }],
-    //['meta', { property: 'og:image', content: '/blog/og-image.png' }], // 必须配置图片
+    // Open Graph
+    ['meta', { property: 'og:title', content: 'Bingran Li - Academic Homepage' }],
+    ['meta', { property: 'og:description', content: 'Bingran Li — undergraduate researcher in mathematics and optimization at CUHK-Shenzhen.' }],
     ['meta', { property: 'og:url', content: 'https://bingran-li.github.io/blog/' }],
     ['meta', { property: 'og:type', content: 'website' }],
+    // Google Scholar friendly meta tags
+    ['meta', { name: 'citation_author', content: 'Bingran Li' }],
   ],
+  sitemap: {
+    hostname: 'https://bingran-li.github.io/blog/',
+  },
 
   themeConfig: {
     //logo: ,
-    siteTitle: "Bingran's Blog",
+    siteTitle: "Bingran Li",
     outlineTitle: "Content",
     outline: [1, 6],
     // https://vitepress.dev/reference/default-theme-config
@@ -44,14 +50,14 @@ export default defineConfig({
     ],
 
     footer: {
-      copyright: "Copyright@ 2025 Bingran Li"
+      copyright: "Copyright © 2025 Bingran Li"
     },
 
     lastUpdated: {
       text: 'Updated at',
       formatOptions: {
         dateStyle: 'full',
-        timeStyle: 'medium'
+        forceLocale: true,
       }
     },
 
@@ -62,15 +68,15 @@ export default defineConfig({
           root: {
             translations: {
               button: {
-                buttonText: '搜索文档',
-                buttonAriaLabel: '搜索文档',
+                buttonText: 'Search',
+                buttonAriaLabel: 'Search',
               },
               modal: {
-                noResultsText: '无法找到相关结果',
-                resetButtonTitle: '清除查询条件',
+                noResultsText: 'No results found',
+                resetButtonTitle: 'Clear',
                 footer: {
-                  selectText: '选择',
-                  navigateText: '切换',
+                  selectText: 'Select',
+                  navigateText: 'Navigate',
                 },
               },
             },

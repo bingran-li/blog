@@ -3,22 +3,28 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Runtime API Examples | Bingran's blog</title>
-    <meta name="description" content="Personal Blog">
+    <title>Runtime API Examples | Bingran Li - Academic Homepage</title>
+    <meta name="description" content="Bingran Li is an undergraduate student in Mathematics at CUHK-Shenzhen, working on optimization theory, Adam convergence, and mathematical foundations of machine learning.">
     <meta name="generator" content="VitePress v1.6.3">
-    <link rel="preload stylesheet" href="/assets/style.D6RJcgMX.css" as="style">
-    <link rel="preload stylesheet" href="/vp-icons.css" as="style">
+    <link rel="preload stylesheet" href="/blog/assets/style.BjeaZCST.css" as="style">
+    <link rel="preload stylesheet" href="/blog/vp-icons.css" as="style">
     
-    <script type="module" src="/assets/app.BlfeqlNq.js"></script>
-    <link rel="preload" href="/assets/inter-roman-latin.Di8DUHzh.woff2" as="font" type="font/woff2" crossorigin="">
-    <link rel="modulepreload" href="/assets/chunks/theme.B4EvNrRr.js">
-    <link rel="modulepreload" href="/assets/chunks/framework.Ds6Eueu6.js">
-    <link rel="modulepreload" href="/assets/api-examples.md.qHGrmtMy.lean.js">
+    <script type="module" src="/blog/assets/app.BExwZOeE.js"></script>
+    <link rel="preload" href="/blog/assets/inter-roman-latin.Di8DUHzh.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="modulepreload" href="/blog/assets/chunks/theme.4dcTuF7d.js">
+    <link rel="modulepreload" href="/blog/assets/chunks/framework.DIjo3T_t.js">
+    <link rel="modulepreload" href="/blog/assets/api-examples.md.EZ9iKSIu.lean.js">
+    <meta name="google-site-verification" content="XSwq30RrSz3qsEb98KeDPw9PVqXha8FxZMexasVxEgo">
+    <meta property="og:title" content="Bingran Li - Academic Homepage">
+    <meta property="og:description" content="Bingran Li — undergraduate researcher in mathematics and optimization at CUHK-Shenzhen.">
+    <meta property="og:url" content="https://bingran-li.github.io/blog/">
+    <meta property="og:type" content="website">
+    <meta name="citation_author" content="Bingran Li">
     <script id="check-dark-mode">(()=>{const e=localStorage.getItem("vitepress-theme-appearance")||"auto",a=window.matchMedia("(prefers-color-scheme: dark)").matches;(!e||e==="auto"?a:e==="dark")&&document.documentElement.classList.add("dark")})();</script>
     <script id="check-mac-os">document.documentElement.classList.toggle("mac",/Mac|iPhone|iPod|iPad/i.test(navigator.platform));</script>
   </head>
   <body>
-    <div id="app"><div class="Layout" data-v-f12f9f1f><!--[--><!--]--><!--[--><span tabindex="-1" data-v-27b8d6b5></span><a href="#VPContent" class="VPSkipLink visually-hidden" data-v-27b8d6b5>Skip to content</a><!--]--><!----><header class="VPNav" data-v-f12f9f1f data-v-6022d0ae><div class="VPNavBar" data-v-6022d0ae data-v-ddfe0f08><div class="wrapper" data-v-ddfe0f08><div class="container" data-v-ddfe0f08><div class="title" data-v-ddfe0f08><div class="VPNavBarTitle" data-v-ddfe0f08 data-v-742bc37e><a class="title" href="/" data-v-742bc37e><!--[--><!--]--><!----><span data-v-742bc37e>Bingran&#39;s blog</span><!--[--><!--]--></a></div></div><div class="content" data-v-ddfe0f08><div class="content-body" data-v-ddfe0f08><!--[--><!--]--><div class="VPNavBarSearch search" data-v-ddfe0f08><!--[--><!----><div id="local-search"><button type="button" class="DocSearch DocSearch-Button" aria-label="搜索文档"><span class="DocSearch-Button-Container"><span class="vp-icon DocSearch-Search-Icon"></span><span class="DocSearch-Button-Placeholder">搜索文档</span></span><span class="DocSearch-Button-Keys"><kbd class="DocSearch-Button-Key"></kbd><kbd class="DocSearch-Button-Key">K</kbd></span></button></div><!--]--></div><nav aria-labelledby="main-nav-aria-label" class="VPNavBarMenu menu" data-v-ddfe0f08 data-v-13450c69><span id="main-nav-aria-label" class="visually-hidden" data-v-13450c69> Main Navigation </span><!--[--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/" tabindex="0" data-v-13450c69 data-v-848938ee><!--[--><span data-v-848938ee>Home</span><!--]--></a><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/inspiration.html" tabindex="0" data-v-13450c69 data-v-848938ee><!--[--><span data-v-848938ee>Inspiration</span><!--]--></a><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/notes.html" tabindex="0" data-v-13450c69 data-v-848938ee><!--[--><span data-v-848938ee>Notes</span><!--]--></a><!--]--><!--]--></nav><!----><div class="VPNavBarAppearance appearance" data-v-ddfe0f08 data-v-31745bd4><button class="VPSwitch VPSwitchAppearance" type="button" role="switch" title aria-checked="false" data-v-31745bd4 data-v-2b3166cb data-v-5865f0ee><span class="check" data-v-5865f0ee><span class="icon" data-v-5865f0ee><!--[--><span class="vpi-sun sun" data-v-2b3166cb></span><span class="vpi-moon moon" data-v-2b3166cb></span><!--]--></span></span></button></div><div class="VPSocialLinks VPNavBarSocialLinks social-links" data-v-ddfe0f08 data-v-85e7c8d8 data-v-e377b335><!--[--><a class="VPSocialLink no-icon" href="https://github.com/vuejs/vitepress" aria-label="github" target="_blank" rel="noopener" data-v-e377b335 data-v-47edd5e6><span class="vpi-social-github"></span></a><!--]--></div><div class="VPFlyout VPNavBarExtra extra" data-v-ddfe0f08 data-v-9167825c data-v-fce78453><button type="button" class="button" aria-haspopup="true" aria-expanded="false" aria-label="extra navigation" data-v-fce78453><span class="vpi-more-horizontal icon" data-v-fce78453></span></button><div class="menu" data-v-fce78453><div class="VPMenu" data-v-fce78453 data-v-33ded786><!----><!--[--><!--[--><!----><div class="group" data-v-9167825c><div class="item appearance" data-v-9167825c><p class="label" data-v-9167825c>Appearance</p><div class="appearance-action" data-v-9167825c><button class="VPSwitch VPSwitchAppearance" type="button" role="switch" title aria-checked="false" data-v-9167825c data-v-2b3166cb data-v-5865f0ee><span class="check" data-v-5865f0ee><span class="icon" data-v-5865f0ee><!--[--><span class="vpi-sun sun" data-v-2b3166cb></span><span class="vpi-moon moon" data-v-2b3166cb></span><!--]--></span></span></button></div></div></div><div class="group" data-v-9167825c><div class="item social-links" data-v-9167825c><div class="VPSocialLinks social-links-list" data-v-9167825c data-v-e377b335><!--[--><a class="VPSocialLink no-icon" href="https://github.com/vuejs/vitepress" aria-label="github" target="_blank" rel="noopener" data-v-e377b335 data-v-47edd5e6><span class="vpi-social-github"></span></a><!--]--></div></div></div><!--]--><!--]--></div></div></div><!--[--><!--]--><button type="button" class="VPNavBarHamburger hamburger" aria-label="mobile navigation" aria-expanded="false" aria-controls="VPNavScreen" data-v-ddfe0f08 data-v-ae031744><span class="container" data-v-ae031744><span class="top" data-v-ae031744></span><span class="middle" data-v-ae031744></span><span class="bottom" data-v-ae031744></span></span></button></div></div></div></div><div class="divider" data-v-ddfe0f08><div class="divider-line" data-v-ddfe0f08></div></div></div><!----></header><div class="VPLocalNav empty fixed" data-v-f12f9f1f data-v-1d9b9b88><div class="container" data-v-1d9b9b88><!----><div class="VPLocalNavOutlineDropdown" style="--vp-vh:0px;" data-v-1d9b9b88 data-v-df352aa3><button data-v-df352aa3>Return to top</button><!----></div></div></div><!----><div class="VPContent" id="VPContent" data-v-f12f9f1f data-v-dc4fc188><div class="VPDoc has-aside" data-v-dc4fc188 data-v-ee4030a0><!--[--><!--]--><div class="container" data-v-ee4030a0><div class="aside" data-v-ee4030a0><div class="aside-curtain" data-v-ee4030a0></div><div class="aside-container" data-v-ee4030a0><div class="aside-content" data-v-ee4030a0><div class="VPDocAside" data-v-ee4030a0 data-v-d1aef524><!--[--><!--]--><!--[--><!--]--><nav aria-labelledby="doc-outline-aria-label" class="VPDocAsideOutline" data-v-d1aef524 data-v-bfeac4b4><div class="content" data-v-bfeac4b4><div class="outline-marker" data-v-bfeac4b4></div><div aria-level="2" class="outline-title" id="doc-outline-aria-label" role="heading" data-v-bfeac4b4>Content</div><ul class="VPDocOutlineItem root" data-v-bfeac4b4 data-v-90121124><!--[--><!--]--></ul></div></nav><!--[--><!--]--><div class="spacer" data-v-d1aef524></div><!--[--><!--]--><!----><!--[--><!--]--><!--[--><!--]--></div></div></div></div><div class="content" data-v-ee4030a0><div class="content-container" data-v-ee4030a0><!--[--><!--]--><main class="main" data-v-ee4030a0><div style="position:relative;" class="vp-doc _api-examples" data-v-ee4030a0><div><h1 id="runtime-api-examples" tabindex="-1">Runtime API Examples <a class="header-anchor" href="#runtime-api-examples" aria-label="Permalink to &quot;Runtime API Examples&quot;">​</a></h1><p>This page demonstrates usage of some of the runtime APIs provided by VitePress.</p><p>The main <code>useData()</code> API can be used to access site, theme, and page data for the current page. It works in both <code>.md</code> and <code>.vue</code> files:</p><div class="language-md vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">md</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&lt;script setup&gt;</span></span>
+    <div id="app"><div class="Layout" data-v-f12f9f1f><!--[--><!--]--><!--[--><span tabindex="-1" data-v-27b8d6b5></span><a href="#VPContent" class="VPSkipLink visually-hidden" data-v-27b8d6b5>Skip to content</a><!--]--><!----><header class="VPNav" data-v-f12f9f1f data-v-6022d0ae><div class="VPNavBar" data-v-6022d0ae data-v-ddfe0f08><div class="wrapper" data-v-ddfe0f08><div class="container" data-v-ddfe0f08><div class="title" data-v-ddfe0f08><div class="VPNavBarTitle" data-v-ddfe0f08 data-v-742bc37e><a class="title" href="/blog/" data-v-742bc37e><!--[--><!--]--><!----><span data-v-742bc37e>Bingran Li</span><!--[--><!--]--></a></div></div><div class="content" data-v-ddfe0f08><div class="content-body" data-v-ddfe0f08><!--[--><!--]--><div class="VPNavBarSearch search" data-v-ddfe0f08><!--[--><!----><div id="local-search"><button type="button" class="DocSearch DocSearch-Button" aria-label="搜索文档"><span class="DocSearch-Button-Container"><span class="vp-icon DocSearch-Search-Icon"></span><span class="DocSearch-Button-Placeholder">搜索文档</span></span><span class="DocSearch-Button-Keys"><kbd class="DocSearch-Button-Key"></kbd><kbd class="DocSearch-Button-Key">K</kbd></span></button></div><!--]--></div><nav aria-labelledby="main-nav-aria-label" class="VPNavBarMenu menu" data-v-ddfe0f08 data-v-13450c69><span id="main-nav-aria-label" class="visually-hidden" data-v-13450c69> Main Navigation </span><!--[--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/blog/" tabindex="0" data-v-13450c69 data-v-848938ee><!--[--><span data-v-848938ee>Home</span><!--]--></a><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/blog/publications.html" tabindex="0" data-v-13450c69 data-v-848938ee><!--[--><span data-v-848938ee>Publications</span><!--]--></a><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/blog/inspiration.html" tabindex="0" data-v-13450c69 data-v-848938ee><!--[--><span data-v-848938ee>Inspiration</span><!--]--></a><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/blog/notes.html" tabindex="0" data-v-13450c69 data-v-848938ee><!--[--><span data-v-848938ee>Notes</span><!--]--></a><!--]--><!--]--></nav><!----><div class="VPNavBarAppearance appearance" data-v-ddfe0f08 data-v-31745bd4><button class="VPSwitch VPSwitchAppearance" type="button" role="switch" title aria-checked="false" data-v-31745bd4 data-v-2b3166cb data-v-5865f0ee><span class="check" data-v-5865f0ee><span class="icon" data-v-5865f0ee><!--[--><span class="vpi-sun sun" data-v-2b3166cb></span><span class="vpi-moon moon" data-v-2b3166cb></span><!--]--></span></span></button></div><div class="VPSocialLinks VPNavBarSocialLinks social-links" data-v-ddfe0f08 data-v-85e7c8d8 data-v-e377b335><!--[--><a class="VPSocialLink no-icon" href="https://github.com/bingran-li" aria-label="github" target="_blank" rel="noopener" data-v-e377b335 data-v-47edd5e6><span class="vpi-social-github"></span></a><!--]--></div><div class="VPFlyout VPNavBarExtra extra" data-v-ddfe0f08 data-v-9167825c data-v-fce78453><button type="button" class="button" aria-haspopup="true" aria-expanded="false" aria-label="extra navigation" data-v-fce78453><span class="vpi-more-horizontal icon" data-v-fce78453></span></button><div class="menu" data-v-fce78453><div class="VPMenu" data-v-fce78453 data-v-33ded786><!----><!--[--><!--[--><!----><div class="group" data-v-9167825c><div class="item appearance" data-v-9167825c><p class="label" data-v-9167825c>Appearance</p><div class="appearance-action" data-v-9167825c><button class="VPSwitch VPSwitchAppearance" type="button" role="switch" title aria-checked="false" data-v-9167825c data-v-2b3166cb data-v-5865f0ee><span class="check" data-v-5865f0ee><span class="icon" data-v-5865f0ee><!--[--><span class="vpi-sun sun" data-v-2b3166cb></span><span class="vpi-moon moon" data-v-2b3166cb></span><!--]--></span></span></button></div></div></div><div class="group" data-v-9167825c><div class="item social-links" data-v-9167825c><div class="VPSocialLinks social-links-list" data-v-9167825c data-v-e377b335><!--[--><a class="VPSocialLink no-icon" href="https://github.com/bingran-li" aria-label="github" target="_blank" rel="noopener" data-v-e377b335 data-v-47edd5e6><span class="vpi-social-github"></span></a><!--]--></div></div></div><!--]--><!--]--></div></div></div><!--[--><!--]--><button type="button" class="VPNavBarHamburger hamburger" aria-label="mobile navigation" aria-expanded="false" aria-controls="VPNavScreen" data-v-ddfe0f08 data-v-ae031744><span class="container" data-v-ae031744><span class="top" data-v-ae031744></span><span class="middle" data-v-ae031744></span><span class="bottom" data-v-ae031744></span></span></button></div></div></div></div><div class="divider" data-v-ddfe0f08><div class="divider-line" data-v-ddfe0f08></div></div></div><!----></header><div class="VPLocalNav empty fixed" data-v-f12f9f1f data-v-1d9b9b88><div class="container" data-v-1d9b9b88><!----><div class="VPLocalNavOutlineDropdown" style="--vp-vh:0px;" data-v-1d9b9b88 data-v-df352aa3><button data-v-df352aa3>Return to top</button><!----></div></div></div><!----><div class="VPContent" id="VPContent" data-v-f12f9f1f data-v-dc4fc188><div class="VPDoc has-aside" data-v-dc4fc188 data-v-ee4030a0><!--[--><!--]--><div class="container" data-v-ee4030a0><div class="aside" data-v-ee4030a0><div class="aside-curtain" data-v-ee4030a0></div><div class="aside-container" data-v-ee4030a0><div class="aside-content" data-v-ee4030a0><div class="VPDocAside" data-v-ee4030a0 data-v-d1aef524><!--[--><!--]--><!--[--><!--]--><nav aria-labelledby="doc-outline-aria-label" class="VPDocAsideOutline" data-v-d1aef524 data-v-bfeac4b4><div class="content" data-v-bfeac4b4><div class="outline-marker" data-v-bfeac4b4></div><div aria-level="2" class="outline-title" id="doc-outline-aria-label" role="heading" data-v-bfeac4b4>Content</div><ul class="VPDocOutlineItem root" data-v-bfeac4b4 data-v-90121124><!--[--><!--]--></ul></div></nav><!--[--><!--]--><div class="spacer" data-v-d1aef524></div><!--[--><!--]--><!----><!--[--><!--]--><!--[--><!--]--></div></div></div></div><div class="content" data-v-ee4030a0><div class="content-container" data-v-ee4030a0><!--[--><!--]--><main class="main" data-v-ee4030a0><div style="position:relative;" class="vp-doc _blog_api-examples" data-v-ee4030a0><div><h1 id="runtime-api-examples" tabindex="-1">Runtime API Examples <a class="header-anchor" href="#runtime-api-examples" aria-label="Permalink to &quot;Runtime API Examples&quot;">​</a></h1><p>This page demonstrates usage of some of the runtime APIs provided by VitePress.</p><p>The main <code>useData()</code> API can be used to access site, theme, and page data for the current page. It works in both <code>.md</code> and <code>.vue</code> files:</p><div class="language-md vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">md</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&lt;script setup&gt;</span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">import { useData } from &#39;vitepress&#39;</span></span>
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">const { theme, page, frontmatter } = useData()</span></span>
@@ -34,15 +40,20 @@
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;">### Page Frontmatter</span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&lt;pre&gt;{{ frontmatter }}&lt;/pre&gt;</span></span></code></pre></div><h2 id="results" tabindex="-1">Results <a class="header-anchor" href="#results" aria-label="Permalink to &quot;Results&quot;">​</a></h2><h3 id="theme-data" tabindex="-1">Theme Data <a class="header-anchor" href="#theme-data" aria-label="Permalink to &quot;Theme Data&quot;">​</a></h3><pre>{
+  &quot;siteTitle&quot;: &quot;Bingran Li&quot;,
   &quot;outlineTitle&quot;: &quot;Content&quot;,
   &quot;outline&quot;: [
-    2,
+    1,
     6
   ],
   &quot;nav&quot;: [
     {
       &quot;text&quot;: &quot;Home&quot;,
       &quot;link&quot;: &quot;/&quot;
+    },
+    {
+      &quot;text&quot;: &quot;Publications&quot;,
+      &quot;link&quot;: &quot;/publications&quot;
     },
     {
       &quot;text&quot;: &quot;Inspiration&quot;,
@@ -54,6 +65,12 @@
     }
   ],
   &quot;sidebar&quot;: {
+    &quot;/publications/&quot;: [
+      {
+        &quot;text&quot;: &quot;publications&quot;,
+        &quot;items&quot;: []
+      }
+    ],
     &quot;/inspiration/&quot;: [
       {
         &quot;text&quot;: &quot;inspiration&quot;,
@@ -61,6 +78,10 @@
           {
             &quot;text&quot;: &quot;Notes&quot;,
             &quot;link&quot;: &quot;/inspiration/Notes&quot;
+          },
+          {
+            &quot;text&quot;: &quot;《哲学的问题》&quot;,
+            &quot;link&quot;: &quot;/inspiration/《哲学的问题》&quot;
           }
         ]
       }
@@ -74,8 +95,28 @@
             &quot;link&quot;: &quot;/notes/2024 Fall Archive&quot;
           },
           {
+            &quot;text&quot;: &quot;Computational Complexity&quot;,
+            &quot;link&quot;: &quot;/notes/Computational Complexity&quot;
+          },
+          {
             &quot;text&quot;: &quot;CS106B&quot;,
             &quot;link&quot;: &quot;/notes/CS106B&quot;
+          },
+          {
+            &quot;text&quot;: &quot;Incremental Approximation of Covariance Square Root&quot;,
+            &quot;link&quot;: &quot;/notes/Incremental Approximation of Covariance Square Root&quot;
+          },
+          {
+            &quot;text&quot;: &quot;Memory Problems In AI&quot;,
+            &quot;link&quot;: &quot;/notes/Memory Problems In AI&quot;
+          },
+          {
+            &quot;text&quot;: &quot;Probability in Combinatorics&quot;,
+            &quot;link&quot;: &quot;/notes/Probability in Combinatorics&quot;
+          },
+          {
+            &quot;text&quot;: &quot;Resource&quot;,
+            &quot;link&quot;: &quot;/notes/Resource&quot;
           }
         ]
       }
@@ -84,11 +125,18 @@
   &quot;socialLinks&quot;: [
     {
       &quot;icon&quot;: &quot;github&quot;,
-      &quot;link&quot;: &quot;https://github.com/vuejs/vitepress&quot;
+      &quot;link&quot;: &quot;https://github.com/bingran-li&quot;
     }
   ],
   &quot;footer&quot;: {
-    &quot;copyright&quot;: &quot;Copyright@ 2024 Bingran Li&quot;
+    &quot;copyright&quot;: &quot;Copyright © 2025 Bingran Li&quot;
+  },
+  &quot;lastUpdated&quot;: {
+    &quot;text&quot;: &quot;Updated at&quot;,
+    &quot;formatOptions&quot;: {
+      &quot;dateStyle&quot;: &quot;full&quot;,
+      &quot;timeStyle&quot;: &quot;medium&quot;
+    }
   },
   &quot;search&quot;: {
     &quot;provider&quot;: &quot;local&quot;,
@@ -121,11 +169,12 @@
   },
   &quot;headers&quot;: [],
   &quot;relativePath&quot;: &quot;api-examples.md&quot;,
-  &quot;filePath&quot;: &quot;api-examples.md&quot;
+  &quot;filePath&quot;: &quot;api-examples.md&quot;,
+  &quot;lastUpdated&quot;: null
 }</pre><h3 id="page-frontmatter" tabindex="-1">Page Frontmatter <a class="header-anchor" href="#page-frontmatter" aria-label="Permalink to &quot;Page Frontmatter&quot;">​</a></h3><pre>{
   &quot;outline&quot;: &quot;deep&quot;
-}</pre><h2 id="more" tabindex="-1">More <a class="header-anchor" href="#more" aria-label="Permalink to &quot;More&quot;">​</a></h2><p>Check out the documentation for the <a href="https://vitepress.dev/reference/runtime-api#usedata" target="_blank" rel="noreferrer">full list of runtime APIs</a>.</p></div></div></main><footer class="VPDocFooter" data-v-ee4030a0 data-v-9f738c46><!--[--><!--]--><!----><!----></footer><!--[--><!--]--></div></div></div><!--[--><!--]--></div></div><footer class="VPFooter" data-v-f12f9f1f data-v-8a5a2cc0><div class="container" data-v-8a5a2cc0><!----><p class="copyright" data-v-8a5a2cc0>Copyright@ 2024 Bingran Li</p></div></footer><!--[--><!--]--></div></div>
-    <script>window.__VP_HASH_MAP__=JSON.parse("{\"api-examples.md\":\"qHGrmtMy\",\"index.md\":\"BvJfd7cj\",\"inspiration_index.md\":\"C9wLC762\",\"inspiration_notes.md\":\"C0VU7dkZ\",\"markdown-examples.md\":\"BxWMIUhE\",\"notes_2024 fall archive.md\":\"SVtPJI_v\",\"notes_cs106b.md\":\"ChLarpHy\",\"notes_index.md\":\"BRFvXIPW\"}");window.__VP_SITE_DATA__=JSON.parse("{\"lang\":\"en-US\",\"dir\":\"ltr\",\"title\":\"Bingran's blog\",\"description\":\"Personal Blog\",\"base\":\"/\",\"head\":[],\"router\":{\"prefetchLinks\":true},\"appearance\":true,\"themeConfig\":{\"outlineTitle\":\"Content\",\"outline\":[2,6],\"nav\":[{\"text\":\"Home\",\"link\":\"/\"},{\"text\":\"Inspiration\",\"link\":\"/inspiration\"},{\"text\":\"Notes\",\"link\":\"/notes\"}],\"sidebar\":{\"/inspiration/\":[{\"text\":\"inspiration\",\"items\":[{\"text\":\"Notes\",\"link\":\"/inspiration/Notes\"}]}],\"/notes/\":[{\"text\":\"notes\",\"items\":[{\"text\":\"2024 Fall Archive\",\"link\":\"/notes/2024 Fall Archive\"},{\"text\":\"CS106B\",\"link\":\"/notes/CS106B\"}]}]},\"socialLinks\":[{\"icon\":\"github\",\"link\":\"https://github.com/vuejs/vitepress\"}],\"footer\":{\"copyright\":\"Copyright@ 2024 Bingran Li\"},\"search\":{\"provider\":\"local\",\"options\":{\"locales\":{\"root\":{\"translations\":{\"button\":{\"buttonText\":\"搜索文档\",\"buttonAriaLabel\":\"搜索文档\"},\"modal\":{\"noResultsText\":\"无法找到相关结果\",\"resetButtonTitle\":\"清除查询条件\",\"footer\":{\"selectText\":\"选择\",\"navigateText\":\"切换\"}}}}}}}},\"locales\":{},\"scrollOffset\":134,\"cleanUrls\":false}");</script>
+}</pre><h2 id="more" tabindex="-1">More <a class="header-anchor" href="#more" aria-label="Permalink to &quot;More&quot;">​</a></h2><p>Check out the documentation for the <a href="https://vitepress.dev/reference/runtime-api#usedata" target="_blank" rel="noreferrer">full list of runtime APIs</a>.</p></div></div></main><footer class="VPDocFooter" data-v-ee4030a0 data-v-9f738c46><!--[--><!--]--><!----><!----></footer><!--[--><!--]--></div></div></div><!--[--><!--]--></div></div><footer class="VPFooter" data-v-f12f9f1f data-v-8a5a2cc0><div class="container" data-v-8a5a2cc0><!----><p class="copyright" data-v-8a5a2cc0>Copyright © 2025 Bingran Li</p></div></footer><!--[--><!--]--></div></div>
+    <script>window.__VP_HASH_MAP__=JSON.parse("{\"api-examples.md\":\"EZ9iKSIu\",\"concentration inequalities-reading group.md\":\"D0P_7FJo\",\"course project (dda6202 optimization in machine learning).md\":\"EVfBgo6f\",\"cv.md\":\"BYNuOQld\",\"groups.md\":\"ChfP_O-l\",\"high dimensional probability.md\":\"uMlAuXIm\",\"index.md\":\"BIyWj3Wo\",\"inspiration_index.md\":\"BjpJxCHf\",\"inspiration_notes.md\":\"BalO87BQ\",\"inspiration_《哲学的问题》.md\":\"BdeWgGUw\",\"merton's problem.md\":\"BC5VVC1F\",\"notes_2024 fall archive.md\":\"CuAs9WTu\",\"notes_computational complexity.md\":\"TFS362OF\",\"notes_cs106b.md\":\"B5fvqwp8\",\"notes_incremental approximation of covariance square root.md\":\"Cn1fsRXo\",\"notes_index.md\":\"DTYxzrUd\",\"notes_memory problems in ai.md\":\"EM0VURmB\",\"notes_probability in combinatorics.md\":\"qrT6-Uf2\",\"notes_resource.md\":\"BqGDxsWk\",\"papers - global political economy.md\":\"Cygj4Ag_\",\"publications_index.md\":\"DbWpqZGI\"}");window.__VP_SITE_DATA__=JSON.parse("{\"lang\":\"en-US\",\"dir\":\"ltr\",\"title\":\"Bingran Li - Academic Homepage\",\"description\":\"Bingran Li is an undergraduate student in Mathematics at CUHK-Shenzhen, working on optimization theory, Adam convergence, and mathematical foundations of machine learning.\",\"base\":\"/blog/\",\"head\":[],\"router\":{\"prefetchLinks\":true},\"appearance\":true,\"themeConfig\":{\"siteTitle\":\"Bingran Li\",\"outlineTitle\":\"Content\",\"outline\":[1,6],\"nav\":[{\"text\":\"Home\",\"link\":\"/\"},{\"text\":\"Publications\",\"link\":\"/publications\"},{\"text\":\"Inspiration\",\"link\":\"/inspiration\"},{\"text\":\"Notes\",\"link\":\"/notes\"}],\"sidebar\":{\"/publications/\":[{\"text\":\"publications\",\"items\":[]}],\"/inspiration/\":[{\"text\":\"inspiration\",\"items\":[{\"text\":\"Notes\",\"link\":\"/inspiration/Notes\"},{\"text\":\"《哲学的问题》\",\"link\":\"/inspiration/《哲学的问题》\"}]}],\"/notes/\":[{\"text\":\"notes\",\"items\":[{\"text\":\"2024 Fall Archive\",\"link\":\"/notes/2024 Fall Archive\"},{\"text\":\"Computational Complexity\",\"link\":\"/notes/Computational Complexity\"},{\"text\":\"CS106B\",\"link\":\"/notes/CS106B\"},{\"text\":\"Incremental Approximation of Covariance Square Root\",\"link\":\"/notes/Incremental Approximation of Covariance Square Root\"},{\"text\":\"Memory Problems In AI\",\"link\":\"/notes/Memory Problems In AI\"},{\"text\":\"Probability in Combinatorics\",\"link\":\"/notes/Probability in Combinatorics\"},{\"text\":\"Resource\",\"link\":\"/notes/Resource\"}]}]},\"socialLinks\":[{\"icon\":\"github\",\"link\":\"https://github.com/bingran-li\"}],\"footer\":{\"copyright\":\"Copyright © 2025 Bingran Li\"},\"lastUpdated\":{\"text\":\"Updated at\",\"formatOptions\":{\"dateStyle\":\"full\",\"timeStyle\":\"medium\"}},\"search\":{\"provider\":\"local\",\"options\":{\"locales\":{\"root\":{\"translations\":{\"button\":{\"buttonText\":\"搜索文档\",\"buttonAriaLabel\":\"搜索文档\"},\"modal\":{\"noResultsText\":\"无法找到相关结果\",\"resetButtonTitle\":\"清除查询条件\",\"footer\":{\"selectText\":\"选择\",\"navigateText\":\"切换\"}}}}}}}},\"locales\":{},\"scrollOffset\":134,\"cleanUrls\":false}");</script>
     
   </body>
 </html>

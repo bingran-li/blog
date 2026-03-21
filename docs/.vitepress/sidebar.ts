@@ -1,15 +1,8 @@
 
 export const sidebar = {
-  '/publications/': [
-    {
-      text: 'publications',
-      items: [
-      ]
-    }
-  ],
   '/inspiration/': [
     {
-      text: 'inspiration',
+      text: 'Inspiration',
       items: [
         {
           text: 'Notes',
@@ -24,7 +17,7 @@ export const sidebar = {
   ],
   '/notes/': [
     {
-      text: 'notes',
+      text: 'Notes',
       items: [
         {
           text: '2024 Fall Archive',
