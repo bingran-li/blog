@@ -140,12 +140,50 @@
   padding: 0 48px !important;
 }
 
-/* Profile Header: photo left, info right */
+/* Decorative banner strip — pure decoration, no content overlap */
+.banner-strip {
+  /* ---- Banner size: adjust height to control banner height ---- */
+  height: 35vh;
+  /* ---- Banner image: background-position controls which part of the image is visible ---- */
+  background: url('/de_chirico_banner.svg') no-repeat center center / 100% auto;
+  /* Break out of parent container to full viewport width */
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  /* Remove gap between navbar and banner */
+  margin-top: -48px;
+  margin-bottom: 0;
+  position: relative;
+}
+
+/* Gradient fade at bottom of banner */
+.banner-strip::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 80px;
+  pointer-events: none;
+}
+:root .banner-strip::after {
+  background: linear-gradient(to bottom, rgba(245,249,253,0) 0%, rgba(245,249,253,1) 100%);
+}
+.dark .banner-strip::after {
+  background: linear-gradient(to bottom, rgba(10,26,51,0) 0%, rgba(10,26,51,1) 100%);
+}
+
+/* Also remove top padding from VPDoc content on academic page */
+.academic-page .VPDoc .content {
+  padding-top: 0 !important;
+}
+
+/* Profile Header: photo left, info right — sits below banner in normal flow */
 .profile-header {
   display: flex;
   align-items: flex-start;
   gap: 32px;
-  margin-bottom: 8px;
+  margin-bottom: 0px;
+  padding-top: 24px;
 }
 
 .profile-photo img {
@@ -203,8 +241,7 @@
 /* Section headings with gold underline accent */
 .academic-profile h2 {
   border-top: none;
-  margin-top: 56px;
-  padding-top: 0;
+  margin-top: 48px;
   padding-bottom: 0.5rem;
   position: relative;
 }

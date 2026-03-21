@@ -11,6 +11,8 @@ pageClass: academic-page
 import { withBase } from 'vitepress'
 </script>
 
+<div class="banner-strip"></div>
+
 <div class="academic-profile">
 
 <div class="profile-header">
@@ -53,7 +55,7 @@ My current interest focuses on developing 2nd-order optimization for deep models
   <div class="pub-info">
     <p class="pub-title">Adam Converges Without Any Modification On Update Rules</p>
     <p class="pub-authors">Yushun Zhang, <strong>Bingran Li</strong>, Congliang Chen, Ruoyu Sun, Zhi-Quan Luo</p>
-    <p class="pub-venue">Manuscript, 66 pages. To be submitted to Mathematical Programming, 2026.</p>
+    <p class="pub-venue">Preprint. To be submitted to Mathematical Programming, 2026.</p>
     <div class="pub-links">
       <a href="https://arxiv.org/abs/2603.02092" target="_blank">arXiv</a>
       <a href="https://arxiv.org/pdf/2603.02092" target="_blank">PDF</a>
