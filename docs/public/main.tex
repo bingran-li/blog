@@ -1,0 +1,242 @@
+\documentclass[10pt]{extarticle}
+\usepackage[papersize={7.5in,11in}, top=0.5in, bottom=0.55in, left=0.4in, right=0.4in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{parskip}
+\usepackage{multicol}
+\usepackage{calc} % For length calculations
+\usepackage{unicode-math}
+\usepackage{fontspec}
+
+% Set Cambria and Cambria Math-like fonts (must be XeLaTeX or LuaLaTeX)
+%\setmainfont{Fira Sans}
+%\setmainfont{Nunito}
+%\setmainfont{Libertinus Serif}
+%\setmainfont{Source Sans Pro}
+\setmainfont{Cambria}
+%\setsansfont{Cambria Math}
+%\setmonofont{Courier New}
+\setmathfont{Libertinus Math}
+
+\linespread{1.1} % Line spacing
+\setlength{\parindent}{0pt} % No paragraph indentation
+\setlength{\parskip}{0.2em} % Paragraph spacing
+
+% Custom colors
+\definecolor{sectioncolor}{RGB}{30,90,160} % BLUE
+\definecolor{namecolor}{RGB}{25,90,170} % DARK BLUE
+\definecolor{hrefcolor}{RGB}{102, 51, 153} % PURPLE
+%\definecolor{namecolor}{RGB}{230, 180, 34} % GOLD
+% Section formatting
+%\titleformat{\section}[block]{\color{sectioncolor}\Large\bfseries}{}{0em}{\uppercase}[]
+%\newcommand{\sectionrule}{\vspace{-1.2em}\noindent\color{sectioncolor}\rule{\linewidth}{0.5pt}\vspace{0.4em}}
+%\titlespacing{\section}{0pt}{0.8em}{0.4em} % control spacing before and after section
+
+\newlength{\titlelength}
+\newcommand{\customsection}[1]{
+  \vspace{0.4em}% Space BEFORE section
+  \settowidth{\titlelength}{\color{sectioncolor}\Large\bfseries\uppercase{#1}}
+  {\color{sectioncolor}\Large\bfseries\uppercase{#1}} 
+  {\color{sectioncolor}\rule[0.5ex]{\linewidth-\titlelength-0em}{0.5pt}}\par\vspace{0.2em}% Space AFTER section
+}
+
+% Subsection formatting
+\titleformat{\subsection}[runin]{\bfseries}{}{0em}{}[\hspace{0.5em}]
+
+% Links and color setup
+\hypersetup{
+    colorlinks=true,
+    urlcolor=hrefcolor,
+    linkcolor=black
+}
+
+% Links
+
+% Name style
+\newcommand{\namestyle}[2]{\textbf{\Huge\textcolor{namecolor}{#1} #2}}
+
+% Header contact block
+\newcommand{\contactinfo}{
+\begin{center}
+  \namestyle{Bingran LI}{} \\[4pt]
+  +86 18971326252 $\mid$ \href{mailto:122020087@link.cuhk.edu.cn}{bingranli@link.cuhk.edu.cn} $\mid$ \href{https://bingran-li.github.io/blog/}{https://bingran-li.github.io/blog/}  
+\end{center}}
+
+\begin{document}
+
+\contactinfo
+
+\customsection{Summary} 
+\begin{itemize}[leftmargin=1em, label=$\bullet$, nosep, topsep=0pt] 
+  \item From a humanities high school student to a mathematics undergraduate
+   interested in the theory and application of optimization, probability and computation, into real problems I am passionate about.
+  \item My guiding principle is to distill the essence of real-world problems, formulate them precisely, and solve them using minimal yet effective mathematics.
+\end{itemize}
+
+\customsection{Education}
+\textbf{The Chinese University of Hong Kong, Shenzhen} \hfill \textit{2022 -- 2026 (Expected)}\\
+\textit{Bachelor of Science in Mathematics and Applied Mathematics}
+\begin{itemize}[leftmargin=1em, label=$\bullet$, nosep, topsep=0pt]
+  \item Cumulative GPA: \textbf{3.923/4.000} \quad Rank: \textbf{1st/79}
+  \item \textbf{Main Courses}: Real Analysis(A), Numerical Analysis, Functional Analysis(A), Advanced Linear Algebra, Honours Ordinary Differential Equations(A), Partial Differential Equations(A), Stochastic Processes(A), Mathematical Statistics(A), Modern Optimization, Optimization in Machine Learning and Data Science
+  \item \textbf{Postgraduate Courses}: Topics in Financial Mathematics(A), Measure Theoretic Probability, Numerical Linear Algebra(A), Optimization in Machine Learning(A), Advanced Convex Optimization(A), Analysis of Algorithms, Computer Experiments and Uncertainty Quatification, Advanced Stochastic Processes (Audited) 
+\end{itemize}
+\textbf{The Chinese University of Hong Kong} \hfill \textit{Jun. 2024 -- Aug. 2024}\\
+\textit{International Summer School}
+%\begin{itemize}[leftmargin=1em, label=$\bullet$, nosep, topsep=0pt]
+%  \item Main courses: General Psychology, Chinese Medicine
+%\end{itemize}
+
+\customsection{Working Papers and Publications}
+\textbf{Adam Converges Without Any Modification On Update Rules}\\
+Yushun Zhang, \textbf{Bingran Li}, Ruoyu Sun, Zhi-Quan Luo\\
+Manuscript in final revision (66 pages). To Be Submitted to Mathematical Programming, 2026. [\href{https://arxiv.org/abs/2603.02092}{arXiv}]
+
+\customsection{Research Experience}
+\textbf{Memory Mechanism in Machine Learning Systems} \hfill \textit{Sep. 2025 -- Present}
+\textit{}
+\begin{itemize}[leftmargin=1em, label=$\bullet$, nosep, topsep=0pt]
+  \item Investigating the memory mechanism in machine learning systems, such as Transformers and Memory Mosaics
+  \item Investigating the modern RNNs for efficient long-context modeling (\href{https://bingran-li.github.io/blog/notes/Memory%20Problems%20In%20AI.html}{Presentation})
+\end{itemize}
+
+\textbf{Implementation of Interior Point Methods (IPMs)} \hfill \textit{Apr. 2025 -- Jun. 2025}\\
+\textit{Supervised by Prof. Yin Zhang \& Prof. Yurii Nesterov}
+\begin{itemize}[leftmargin=1em, label=$\bullet$, nosep, topsep=0pt]
+  \item Implemented the Asymmetric Long-Step Primal-Dual IPMs with Dual Centering on Linear Programming problems %and LASSO problems
+\end{itemize}
+
+\textbf{Stochastic Optimization in Deep Learning} \hfill \textit{Feb. 2025 -- Present}\\
+\textit{Supervised by \href{https://ruoyus.github.io/}{Prof. Ruoyu Sun} \& \href{https://zyushun.github.io/}{Yushun Zhang}}
+\begin{itemize}[leftmargin=1em, label=$\bullet$, nosep, topsep=0pt]
+  \item Proved that Adam under with-replacement sampling with $\beta_1>0$ can converge when $\beta_2$ is large enough, which provides guidance for hyperparameter tuning in LLM pre-training
+  \item Contributing author on paper in preparation
+\end{itemize}
+
+%\textbf{Algorithmic Complexity in Markov Decision Processes} \hfill \textit{Oct. 2024 -- Jan. 2025}\\
+%\textit{Supervised by \href{https://web.stanford.edu/~yyye/}{Prof. Yinyu Ye}}
+%\begin{itemize}[leftmargin=1em, label=$\bullet$, nosep, topsep=0pt]
+%  \item Investigated whether policy iteration admits strongly polynomial time complexity for deterministic Markov decision processes
+%\end{itemize}
+
+\textbf{Optimizer Analysis in Deep Learning} \hfill \textit{Oct. 2024 -- Feb. 2025}\\
+\textit{Course Project \& Research}
+\begin{itemize}[leftmargin=1em, label=$\bullet$, nosep, topsep=0pt]
+  \item Course Project: \textit{\textcolor{black}{\href{https://bingran-li.github.io/blog/Course\%20Project\%20(DDA6202\%20Optimization\%20in\%20Machine\%20Learning).html\#course-project-dda6202-optimization-in-machine-learning}{Analyzing Non-diagonal Preconditioning Optimizers in Deep Learning}}}\\
+  Analyzed and compared the performance between diagonal preconditioning optimizers (e.g. Adam-mini) and non-diagonal preconditioning optimizers (SOAP, Shampoo) on linear model, MLP and Transformer; analyzed their memory footprint and computational complexity
+  \item Attempted neuron-wise Shampoo updates (vs. layer-wise) to improve computational efficiency
+\end{itemize}
+
+\textbf{Applications of a Sequential Random Projection Method} \hfill \textit{Aug. 2024 -- May 2025}\\
+\textit{Supervised by \href{https://richardli.xyz/}{Dr. Yingru Li}}
+\begin{itemize}[leftmargin=1em, label=$\bullet$, nosep, topsep=0pt]
+  \item Applied a sequential random projection method to approximate the posterior variance of independent Gaussian arm bandits and to non-asymptotic probability bounds for discrete stochastic integrals
+  \item Developed computationally efficient preconditioner approximating Adagrad's full preconditioner via sequential random projections; proved the approximation is poor due to non-commutativity of the involved matrices (\href{https://bingran-li.github.io/blog/notes/Incremental%20Approximation%20of%20Covariance%20Square%20Root.html}{notes})
+\end{itemize}
+
+\textbf{Stochastic Control for Portfolio Selection} \hfill \textit{Oct. 2023 -- Jul. 2024}\\
+\textit{Supervised by \href{https://yang-liu16.github.io/}{Prof. Yang Liu}}\\
+\textit{Title: \href{https://bingran-li.github.io/blog/Merton's\%20Problem.html\#stochastic-control-for-portfolio-selection-merton-s-problem}{Market-based Value-at-Risk Constraints in Hedge Funds}}
+\begin{itemize}[leftmargin=1em, label=$\bullet$, nosep, topsep=0pt]
+  \item Developed a closed-form optimal strategy for Merton's problem with S-shape utility under a Value-at-Risk constraint
+\end{itemize}
+%\textbf{Factor Investing} \hfill \textit{May 2025 -- Present}\\
+%\textit{Supervised by \href{https://www.shichuan.info/publications/}{Prof. Chuan Shi}}
+%\begin{itemize}[leftmargin=1em, label=$\bullet$, nosep, topsep=0pt]
+%  \item To build a factor investing pipeline starting from multi-factor model selection, and extending to machine learning-based prediction
+%  \item To developed a custom backtesting framework to evaluate portfolio performance using full A-share universe using monthly and daily frequency data
+%\end{itemize}
+
+
+\customsection{Reading Groups} 
+\textbf{Concentration Inequalities} \hfill \textit{Jan. 2024 -- Jul. 2024}\\
+\textit{Supervised by Prof. Jeff Yao}
+\begin{itemize}[leftmargin=1em, label=$\bullet$, nosep, topsep=0pt]
+  \item Delivered lectures on the Johnson-Lindenstrauss Lemma and \href{https://bingran-li.github.io/blog/Concentration\%20Inequalities-Reading\%20Group.html\#concentration-inequalities-reading-group}{the Transportation Method}
+\end{itemize}
+
+\textbf{Graph Theory} \hfill \textit{Jan. 2025 -- May 2025}\\
+\textit{Supervised by Prof. Kenneth Wing Ki Shum}
+\begin{itemize}[leftmargin=1em, label=$\bullet$, nosep, topsep=0pt]
+  \item Delivered lectures on Network Flow problems and Random Graphs
+\end{itemize}
+
+\textbf{Analytic Number Theory} \hfill \textit{Jan. 2025 -- Mar. 2025}\\
+\textit{Supervised by Prof. Tiefeng Jiang}
+\begin{itemize}[leftmargin=1em, label=$\bullet$, nosep, topsep=0pt]
+  \item Delivered lectures on \href{https://bingran-li.github.io/blog/notes/Resource.html}{Arithmetic Function Theory}
+\end{itemize}
+
+\textbf{Theoretical Data Science} \hfill \textit{Feb. 2025 -- May 2025}\\
+\textit{Textbook: Foundations of Data Science,  Supervised by Prof. Zhi-Quan Luo}
+\begin{itemize}[leftmargin=1em, label=$\bullet$, nosep, topsep=0pt]
+  \item Delivered presentations on \href{https://bingran-li.github.io/blog/High\%20Dimensional\%20Probability.html\#high-dimensional-probability}{high dimensional probability and geometry}
+  \item Report on \href{https://bingran-li.github.io/blog/notes/Probability\%20in\%20Combinatorics.html\#welch-bound}{the maximum number of almost orthogonal unit vectors in $\mathbb{R}^d$}
+\end{itemize}
+
+%\textbf{Random Matrix Theory} \hfill \textit{Jun. 2025 -- Present}\\
+%\textit{Supervised by Prof. Tiefeng Jiang}
+
+\customsection{Teaching}
+%\textbf{Lecturer} \hfill \textit{Sept. 2023 -- Present}\\
+%\textit{Academic Department of Statistics Alliance}
+%\begin{itemize}[leftmargin=1em, label=$\bullet$, nosep, topsep=0pt]
+%  \item MAT2050 Mathematical Analysis Midterm Review, 2023-2024 Fall term
+%  \item MAT2004 Mathematical Statistics Midterm Review, 2023-2024 Spring term
+%\end{itemize}
+
+\textbf{Teaching Assistant}\\
+\textit{School of Science and Engineering Help Room} \hfill \textit{Spring 2024}\\
+\textit{MAT2001 Honours Ordinary Differential Equations} (Instructor: Prof. Wei-Ming Ni)\hfill \textit{Fall 2024}\\
+%\begin{itemize}[leftmargin=1em, label=$\bullet$, nosep, topsep=0pt]
+%  \item Gave one-hour tutorials, graded assignments and held a one-hour office every week
+%\end{itemize}
+\textit{STA4001 Stochastic Processes} (Instructor: Prof. Tiefeng Jiang)\hfill \textit{Spring 2025}\\
+%\begin{itemize}[leftmargin=1em, label=$\bullet$, nosep, topsep=0pt]
+%  \item Gave 12 one-hour tutorials for around 40 students
+%\end{itemize}
+\textit{STA4001H Honours Stochastic Processes} (Instructor: Prof. Tiefeng Jiang) \hfill \textit{Fall 2025}
+\begin{itemize}[leftmargin=1em, label=$\bullet$, nosep, topsep=0pt]
+  \item In MAT2001, STA4001 and STA4001H, I gave weekly tutorials, preparing materials and grading assignments.
+\end{itemize}
+
+\customsection{Industry Experience \& Activities}
+\textbf{\href{https://mycapital.net/en}{MY Capital}} \hfill \text{Shanghai, China}\\
+\textit{Quantitative Research Intern} \hfill \textit{Jul. 2025 -- Aug. 2025}
+\begin{itemize}[leftmargin=1em, label=$\bullet$, nosep, topsep=0pt]
+  \item Portfolio optimization. Incorporated KL divergence constraints to improve portfolio robustness; implemented using MOSEK solver and backtested on A-share data
+\end{itemize}
+
+\textbf{\href{}{Quantitative Trading and Investment Association (QTIA)}} \hfill \text{CUHK-Shenzhen}\\
+\textit{Executive Committee Member} \hfill \textit{Jun. 2025 -- Present}
+\begin{itemize}[leftmargin=1em, label=$\bullet$, nosep, topsep=0pt]
+  \item Organize seminars on practical quantitative trading topics for members
+  \item Connect members with industry professionals for networking and provide access to industry resources such as data APIs and trading platforms
+\end{itemize}
+
+\textbf{Mentor in English Pre-sessional Classes Program} \hfill \text{CUHK-Shenzhen}\\
+\textit{Mentor/Peer Advisor} \hfill \textit{Aug. 2023 \& Aug. 2024}
+\begin{itemize}[leftmargin=1em, label=$\bullet$, nosep, topsep=0pt]
+  \item Mentored approximately 30 freshmen. Responsible for organizing extracurricular activities for freshmen, like board games, and assisting English Professor in teaching.
+\end{itemize}
+
+\customsection{HONORS}
+Undergraduate Research Awards \hfill \textit{2024, 2025}\\
+Academic Performance Scholarship (Class B) \hfill \textit{2024, 2025}\\
+National Encouragement Scholarship \hfill \textit{2023}\\
+Dean's List \hfill \textit{2023, 2024, 2025}\\
+Academic Performance Scholarship (Tier 3) \hfill \textit{2023}\\
+Muse College Scholarship \hfill \textit{2022, 2023, 2024}
+
+\customsection{Skills}
+\begin{itemize}[leftmargin=1em, label=$\bullet$, nosep, topsep=0pt]
+  \item \textbf{Technologies}: PyTorch, CUDA (\href{https://learn.nvidia.com/certificates?id=QmNw3vpFQqWRVcdDJY_PEw#}{Certificate}), Numba, MOSEK, COPT, Vite.js
+  \item \textbf{Programming}: Python, MATLAB, C++, Java, R
+  \item \textbf{Tools}: Git, Linux (SSH, command-line), \LaTeX{}, Markdown
+  \item \textbf{Languages}: English (TOEFL 104, GRE Verbal 160) , Mandarin (Native)
+  \item \textbf{Hobbies}: Philosophy, Dance (Hip-Hop), Piano, Chorus, Chinese Poetry Composition
+\end{itemize}
+
+\end{document}
