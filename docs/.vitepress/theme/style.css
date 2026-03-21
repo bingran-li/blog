@@ -358,6 +358,14 @@
 
 /* Responsive: mobile */
 @media (max-width: 640px) {
+  .academic-page .VPDoc .content {
+    padding: 0 16px !important;
+  }
+
+  .academic-profile {
+    padding: 0 8px;
+  }
+
   .profile-header {
     flex-direction: column;
     align-items: center;
