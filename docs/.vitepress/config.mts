@@ -15,7 +15,7 @@ const customElements = [
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   lang: 'en-US',
-  title: "Bingran Li - Academic Homepage",
+  title: "Academic Homepage",
   description: "Bingran Li is an undergraduate student in Mathematics at CUHK-Shenzhen, working on optimization theory, Adam convergence, and mathematical foundations of machine learning.",
   base: "/blog/",
   head: [
