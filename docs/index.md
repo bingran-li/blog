@@ -17,7 +17,7 @@ import { withBase } from 'vitepress'
 
 <div class="profile-header">
   <div class="profile-photo">
-    <img :src="withBase('/photo.jpg')" alt="Bingran Li" />
+    <img :src="withBase('/photo3.jpg')" alt="Bingran Li" />
   </div>
   <div class="profile-info">
     <h1>Bingran Li (李炳然)</h1>
