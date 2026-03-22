@@ -143,16 +143,24 @@
 /* Decorative banner strip — pure decoration, no content overlap */
 .banner-strip {
   /* ---- Banner size: adjust height to control banner height ---- */
-  height: 35vh;
+  height: 30vh;
   /* ---- Banner image: background-position controls which part of the image is visible ---- */
-  background: url('/de_chirico_banner.svg') no-repeat center center / 100% auto;
+  background: url('/banner_nano_copy.jpg') no-repeat center 30% / 100% auto;
   /* Break out of parent container to full viewport width */
   width: 100vw;
   margin-left: calc(-50vw + 50%);
   /* Remove gap between navbar and banner */
   margin-top: -48px;
+  padding-top: var(--vp-nav-height);
   margin-bottom: 0;
   position: relative;
+  z-index: 0;
+}
+
+.VPNav {
+  position: sticky; /* default is already sticky in VitePress; harmless */
+  top: 0;
+  z-index: 50;
 }
 
 /* Gradient fade at bottom of banner */
@@ -166,7 +174,7 @@
   pointer-events: none;
 }
 :root .banner-strip::after {
-  background: linear-gradient(to bottom, rgba(245,249,253,0) 0%, rgba(245,249,253,0.45) 60% , rgba(245,249,253,1.0) 100%);
+  background: linear-gradient(to bottom, rgba(245,249,253,0) 0%, rgba(245,249,253,0.1) 70% , rgba(245,249,253,1.0) 100%);
   pointer-events: none;
   z-index: 0;
 }
