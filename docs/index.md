@@ -54,7 +54,7 @@ My current interest focuses on developing 2nd-order optimization for deep models
   <img :src="withBase('/adam-placeholder.png')" alt="Adam convergence figure" />
   <div class="pub-info">
     <p class="pub-title">Adam Converges Without Any Modification On Update Rules</p>
-    <p class="pub-authors">Yushun Zhang, <strong>Bingran Li</strong>, Congliang Chen, Ruoyu Sun, Zhi-Quan Luo</p>
+    <p class="pub-authors">Yushun Zhang, <strong>Bingran Li</strong>, Congliang Chen, Zhi-Quan Luo, Ruoyu Sun</p>
     <p class="pub-venue">Preprint. To be submitted to Mathematical Programming, 2026.</p>
     <div class="pub-links">
       <a href="https://arxiv.org/abs/2603.02092" target="_blank">arXiv</a>

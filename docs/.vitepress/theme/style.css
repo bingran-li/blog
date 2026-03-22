@@ -145,7 +145,7 @@
   /* ---- Banner size: adjust height to control banner height ---- */
   height: 30vh;
   /* ---- Banner image: background-position controls which part of the image is visible ---- */
-  background: url('/banner_nano_copy.jpg') no-repeat center 30% / 100% auto;
+  background: url('/oil_painting1.jpeg') no-repeat center 60% / 100% auto;
   /* Break out of parent container to full viewport width */
   width: 100vw;
   margin-left: calc(-50vw + 50%);
@@ -174,14 +174,14 @@
   pointer-events: none;
 }
 :root .banner-strip::after {
-  background: linear-gradient(to bottom, rgba(245,249,253,0) 0%, rgba(245,249,253,0.1) 70% , rgba(245,249,253,1.0) 100%);
+  background: linear-gradient(to bottom, rgba(245,249,253,0) 0%, rgba(245,249,253,0.1) 80% , rgba(245,249,253,1.0) 100%);
   pointer-events: none;
   z-index: 0;
 }
 .dark .banner-strip::after {
   background: linear-gradient(to bottom,rgba(13, 32, 64, 0) 0%,    /* 顶部轻透，保留图片感 */
   rgba(13, 32, 64, 0.35) 55%,   /* 中部压暗保证文字可读 */
-  rgba(13, 32, 64, 1.0) 100%);
+  rgba(13, 32, 64, 1.0) 90%);
 }
 
 :root .banner-strip > * {
