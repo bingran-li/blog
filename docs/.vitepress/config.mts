@@ -18,6 +18,7 @@ export default defineConfig({
   title: "Academic Homepage",
   description: "Bingran Li is an undergraduate student in Mathematics at CUHK-Shenzhen, working on optimization theory, Adam convergence, and mathematical foundations of machine learning.",
   base: "/blog/",
+  site: "https://bingran-li.github.io/blog/",
   head: [
     ['meta', { name: 'google-site-verification', content: 'XSwq30RrSz3qsEb98KeDPw9PVqXha8FxZMexasVxEgo' }],
     // Open Graph

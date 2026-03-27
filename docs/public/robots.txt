@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /blog/
+
+Sitemap: https://bingran-li.github.io/blog/sitemap.xml
