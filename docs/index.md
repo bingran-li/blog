@@ -38,7 +38,7 @@ import { withBase } from 'vitepress'
 
 I am a senior undergraduate student in the [School of Science and Engineering](https://sse.cuhk.edu.cn/en) at [The Chinese University of Hong Kong, Shenzhen](https://www.cuhk.edu.cn/en), majoring in Mathematics. At my college, I am very proud to be advised by [Prof. Zhi-Quan (Tom) Luo](https://tomluo123.github.io/), and very fortunate to be mentored by [Prof. Ruoyu Sun](https://ruoyus.github.io/). I work most with [Dr. Yushun Zhang](https://zyushun.github.io/), who guides my research on optimization and machine learning. 
 
-My current interest focuses on developing 2nd-order optimization for deep models and neural architecture design for reasoning. More broadly, I am interested in building rigorous mathematical foundations for modern AI systems through the lens of information, physics and computation. I have also had the privilege of learning from [Yurii Nesterov](https://scholar.google.com/citations?user=DJ8Ep8YAAAAJ&hl=en) (Convex Optimization) and [Yinyu Ye](https://web.stanford.edu/~yyye/) (Optimization in AI) through their courses and research interactions.
+My current interest focuses on developing 2nd-order optimization for deep models and neural architecture design for reasoning. More broadly, I am interested in building rigorous mathematical foundations for modern AI systems through the lens of information, physics and computation. I have also had the privilege of learning from Tiefeng Jiang (Stochastic Processes), [Yurii Nesterov](https://scholar.google.com/citations?user=DJ8Ep8YAAAAJ&hl=en) (Convex Optimization) and [Yinyu Ye](https://web.stanford.edu/~yyye/) (Optimization in AI) through their courses and research interactions.
 
 ## Research Interests
 
@@ -55,7 +55,7 @@ My current interest focuses on developing 2nd-order optimization for deep models
   <div class="pub-info">
     <p class="pub-title">Adam Converges Without Any Modification On Update Rules</p>
     <p class="pub-authors">Yushun Zhang, <strong>Bingran Li</strong>, Congliang Chen, Zhi-Quan Luo, Ruoyu Sun</p>
-    <p class="pub-venue">Preprint. To be submitted to Mathematical Programming, 2026.</p>
+    <p class="pub-venue">Preprint. Submitted to Mathematical Programming, 2026.</p>
     <div class="pub-links">
       <a href="https://arxiv.org/abs/2603.02092" target="_blank">arXiv</a>
       <a href="https://arxiv.org/pdf/2603.02092" target="_blank">PDF</a>
