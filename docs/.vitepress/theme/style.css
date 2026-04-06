@@ -255,6 +255,16 @@
   border-color: var(--vp-c-brand-1);
 }
 
+.connect-note {
+  margin-top: 12px;
+  font-style: italic;
+  font-weight: 600;
+  color: #C9A227;
+}
+.dark .connect-note {
+  color: #E8C87A;
+}
+
 /* Section headings with gold underline accent */
 .academic-profile h2 {
   border-top: none;

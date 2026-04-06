@@ -2,7 +2,7 @@
 export const sidebar = {
   '/inspiration/': [
     {
-      text: 'Inspiration',
+      text: 'inspiration',
       items: [
         {
           text: 'Notes',
@@ -17,7 +17,7 @@ export const sidebar = {
   ],
   '/notes/': [
     {
-      text: 'Notes',
+      text: 'notes',
       items: [
         {
           text: '2024 Fall Archive',
@@ -48,6 +48,12 @@ export const sidebar = {
           link: '/notes/Resource'
         }
       ]
+    }
+  ],
+  '/publications/': [
+    {
+      text: 'publications',
+      items: []
     }
   ]
 };

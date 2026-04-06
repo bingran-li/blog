@@ -31,6 +31,7 @@ import { withBase } from 'vitepress'
       <a href="https://github.com/bingran-li" target="_blank">GitHub</a>
       <a href="https://arxiv.org/search/?query=Bingran+Li&searchtype=author" target="_blank">arXiv</a>
     </div>
+    <p class="connect-note">Big questions ahead. Always happy to connect.</p>
   </div>
 </div>
 
