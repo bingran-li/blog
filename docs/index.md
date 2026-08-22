@@ -23,8 +23,8 @@ import { withBase } from 'vitepress'
     <h1>Bingran Li (李炳然)</h1>
     <p class="tagline">A thinker and a doer.</p>
     <p class="affiliation">
-      Senior Undergraduate in Mathematics<br/>
-      The Chinese University of Hong Kong, Shenzhen (CUHK-Shenzhen)
+      First-year Ph.D. Student in Operations Research<br/>
+      Cornell Univeristy
     </p>
     <div class="profile-links">
       <a href="mailto:bingranli@link.cuhk.edu.cn">Email</a>
@@ -36,8 +36,9 @@ import { withBase } from 'vitepress'
 </div>
 
 ## About
+I am a first-year Ph.D. student at [Cornell University](https://www.cornell.edu/). My research focuses on the design and analysis of optimization algorithms for training deep neural networks.
 
-I am a senior undergraduate student at [The Chinese University of Hong Kong, Shenzhen](https://www.cuhk.edu.cn/en), majoring in Mathematics. At my college, I am very proud to be advised by [Prof. Zhi-Quan (Tom) Luo](https://tomluo123.github.io/), and very fortunate to be mentored by [Prof. Ruoyu Sun](https://ruoyus.github.io/). I work most with [Dr. Yushun Zhang](https://zyushun.github.io/), who guides my research on optimization and machine learning. 
+Previous to [Cornell](https://www.cornell.edu/), I was a senior undergraduate student at [The Chinese University of Hong Kong, Shenzhen](https://www.cuhk.edu.cn/en), majoring in **Mathematics**. At my college, I am very proud to be advised by [Prof. Zhi-Quan (Tom) Luo](https://tomluo123.github.io/), and very fortunate to be mentored by [Prof. Ruoyu Sun](https://ruoyus.github.io/). I work most with [Dr. Yushun Zhang](https://zyushun.github.io/), who guides my research on optimization and machine learning. 
 
 My current interest focuses on developing 2nd-order optimization for deep models and neural architecture design for reasoning. More broadly, I am interested in building rigorous mathematical foundations for modern AI systems through the lens of information, physics and computation. I have also had the privilege of learning from Tiefeng Jiang (Stochastic Processes), [Yurii Nesterov](https://scholar.google.com/citations?user=DJ8Ep8YAAAAJ&hl=en) (Convex Optimization) and [Yinyu Ye](https://web.stanford.edu/~yyye/) (Optimization in AI) through their courses and research interactions.
 
@@ -76,7 +77,7 @@ Teaching Assistant at The Chinese University of Hong Kong, Shenzhen:
 
 ## Miscellaneous
 
-Beyond mathematics, I find deep resonance in philosophy (Nietzsche, Russell, Zhuangzi), classical music (Bach, Gould, Lang Lang), psychology (Jung), and dance. I love mathematics for its certainty — it gives definite answers and sharpens my thinking. Philosophy, on the other hand, is what I practice every day: questioning, doubting, and seeking meaning in an uncertain world. Mathematics disciplines the mind; philosophy sets it free.
+Beyond mathematics, I find deep resonance in philosophy (Nietzsche, Russell, Zhuangzi), classical music (Bach, Gould, Lang Lang), psychology (Jung), and dance (old school Hip-Hop). I love mathematics for its certainty — it gives definite answers and sharpens my thinking. Philosophy, on the other hand, is what I practice every day: questioning, doubting, and seeking meaning in an uncertain world. Mathematics disciplines the mind; philosophy sets it free.
 
 *相与枕藉乎舟中，不知东方之既白。*
 
