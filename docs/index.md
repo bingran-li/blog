@@ -38,16 +38,15 @@ import { withBase } from 'vitepress'
 ## About
 I am a first-year Ph.D. student at [Cornell University](https://www.cornell.edu/). My research interest focuses on the design and analysis of optimization algorithms for training deep neural networks. More broadly, I am interested in building rigorous mathematical foundations for modern AI systems through the lens of information, physics and computation.
 
-Previous to [Cornell](https://www.cornell.edu/), I was an undergraduate student at [The Chinese University of Hong Kong, Shenzhen](https://www.cuhk.edu.cn/en), majoring in **Mathematics**. At my college, I am very proud to be advised by [Prof. Zhi-Quan (Tom) Luo](https://tomluo123.github.io/), and very fortunate to be mentored by [Prof. Ruoyu Sun](https://ruoyus.github.io/). I work most with [Dr. Yushun Zhang](https://zyushun.github.io/), who guides my research on optimization and machine learning. 
+Previous to [Cornell](https://www.cornell.edu/), I was an undergraduate student at [The Chinese University of Hong Kong, Shenzhen](https://www.cuhk.edu.cn/en), majoring in Mathematics. At my college, I am very proud to be advised by [Prof. Zhi-Quan (Tom) Luo](https://tomluo123.github.io/), and very fortunate to be mentored by [Prof. Ruoyu Sun](https://ruoyus.github.io/). I work most with [Dr. Yushun Zhang](https://zyushun.github.io/), who guides my research on optimization and machine learning. 
 
 I have also had the privilege of learning from Tiefeng Jiang (Stochastic Processes), [Yurii Nesterov](https://scholar.google.com/citations?user=DJ8Ep8YAAAAJ&hl=en) (Convex Optimization) and [Yinyu Ye](https://web.stanford.edu/~yyye/) (Optimization in AI) through their courses and research interactions.
 
 ## Research Interests
 
 <div class="research-keywords">
-  <span>Optimization Theory</span>
+  <span>Optimization</span>
   <span>Mathematical Foundations of AI</span>
-  <span>Information Theory and Computation</span>
 </div>
 
 ## Publications & Preprints
@@ -57,7 +56,7 @@ I have also had the privilege of learning from Tiefeng Jiang (Stochastic Process
   <div class="pub-info">
     <p class="pub-title">Adam Converges Without Any Modification On Update Rules</p>
     <p class="pub-authors">Yushun Zhang, <strong>Bingran Li</strong>, Congliang Chen, Zhi-Quan Luo, Ruoyu Sun</p>
-    <p class="pub-venue">Preprint. Submitted to Mathematical Programming, 2026.</p>
+    <p class="pub-venue">Preprint.</p>
     <div class="pub-links">
       <a href="https://arxiv.org/abs/2603.02092" target="_blank">arXiv</a>
       <a href="https://arxiv.org/pdf/2603.02092" target="_blank">PDF</a>
