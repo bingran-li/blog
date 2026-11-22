@@ -242,20 +242,20 @@
 .profile-links a {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 5px 12px 5px 10px;
-  font-size: 0.85rem;
-  line-height: 1;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
   border: 1px solid var(--vp-c-divider);
-  border-radius: 999px;
+  border-radius: 50%;
   color: var(--vp-c-text-2);
   text-decoration: none;
   transition: color 0.2s, background-color 0.2s, border-color 0.2s;
 }
 
 .profile-links a svg {
-  width: 16px;
-  height: 16px;
+  width: 18px;
+  height: 18px;
   flex: none;
 }
 
