@@ -236,33 +236,25 @@
 .profile-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 14px;
 }
 
 .profile-links a {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  padding: 0;
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 50%;
   color: var(--vp-c-text-2);
   text-decoration: none;
-  transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+  transition: color 0.2s;
 }
 
 .profile-links a svg {
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   flex: none;
 }
 
 .profile-links a:hover {
   color: var(--vp-c-brand-1);
-  background-color: var(--vp-c-brand-soft);
-  border-color: var(--vp-c-brand-1);
 }
 
 .connect-note {
