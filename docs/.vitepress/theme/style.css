@@ -240,17 +240,27 @@
 }
 
 .profile-links a {
-  display: inline-block;
-  padding: 4px 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px 5px 10px;
   font-size: 0.85rem;
+  line-height: 1;
   border: 1px solid var(--vp-c-divider);
-  border-radius: 6px;
-  color: var(--vp-c-brand-1);
+  border-radius: 999px;
+  color: var(--vp-c-text-2);
   text-decoration: none;
-  transition: background-color 0.2s, border-color 0.2s;
+  transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+}
+
+.profile-links a svg {
+  width: 16px;
+  height: 16px;
+  flex: none;
 }
 
 .profile-links a:hover {
+  color: var(--vp-c-brand-1);
   background-color: var(--vp-c-brand-soft);
   border-color: var(--vp-c-brand-1);
 }
