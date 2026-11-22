@@ -461,3 +461,24 @@
     justify-content: center;
   }
 }
+
+/* Section pages (Notes, Inspiration, ...): slimmer sidebar, wider reading column */
+:root {
+  --vp-sidebar-width: 232px;
+}
+
+@media (min-width: 960px) {
+  .VPDoc.has-sidebar .container {
+    max-width: 1240px !important;
+  }
+
+  .VPDoc.has-sidebar .content-container {
+    max-width: 900px !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  .VPDoc.has-sidebar .aside {
+    max-width: 208px !important;
+  }
+}
