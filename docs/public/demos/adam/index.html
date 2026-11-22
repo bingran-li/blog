@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Adam converges: Numerical Illustrations</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
+<style>
+:root{--bg:#f6f5f1;--card:#fbfaf7;--fill:#efeee9;--ink:#111111;--mute:#77756f;--line:#dedcd5;--hl:#e9e0ff;--hlink:#6b3fd6;--adam:#e5484d;--sgd:#2f5bea;--conv:#1f9d6b;--div:#e5484d}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121212;--card:#171717;--fill:#1f1f1f;--ink:#eeeeee;--mute:#9a978f;--line:#2e2e2e;--hl:#2d2348;--hlink:#b9a2ff}}
+:root[data-theme="dark"]{--bg:#121212;--card:#171717;--fill:#1f1f1f;--ink:#eeeeee;--mute:#9a978f;--line:#2e2e2e;--hl:#2d2348;--hlink:#b9a2ff}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 "Newsreader",Georgia,serif;
+ background-image:linear-gradient(to right,var(--line) 1px,transparent 1px);background-size:calc(100%/6) 100%;background-attachment:fixed}
+main{max-width:1200px;margin:0 auto;padding:56px 16px 80px}
+h1{font-weight:500;font-size:40px;letter-spacing:-.01em;text-align:center;margin:0 0 10px}
+.hl{background:var(--hl);color:var(--hlink);padding:0 .18em;font-family:"JetBrains Mono",monospace;font-size:.82em;font-weight:500}
+.lede{text-align:center;color:var(--mute);max-width:680px;margin:0 auto 30px;font-size:17px}
+.mono{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:12px;color:var(--mute)}
+.hero{background:var(--card);border:1px solid var(--line);position:relative;height:560px}
+.hero canvas{display:block;width:100%!important;height:100%!important;cursor:grab}
+.hud{position:absolute;left:14px;top:12px;pointer-events:none;font-family:"JetBrains Mono",monospace;font-size:12.5px;line-height:1.8}
+.chip{display:inline-block;padding:0 7px;border-radius:3px;font-size:11.5px;margin-left:6px}
+.c-conv{background:color-mix(in srgb,var(--conv) 16%,transparent);color:var(--conv)}
+.c-div{background:color-mix(in srgb,var(--div) 16%,transparent);color:var(--div)}
+.c-mid{background:var(--fill);color:var(--mute)}
+.hud2{position:absolute;right:14px;top:12px;font-family:"JetBrains Mono",monospace;font-size:12.5px;color:var(--mute);text-align:right;line-height:1.8}
+.bar{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;padding:8px 2px 0}
+.sw{display:inline-block;width:14px;height:3px;vertical-align:middle;margin-right:6px}
+.ctrls{display:grid;grid-template-columns:1fr auto;gap:14px 24px;align-items:end;margin:18px 0 26px;max-width:560px}
+.scen{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:0 0 14px}
+.scen button{font:15px "Newsreader",serif;padding:10px 8px;text-align:left}
+.scen button b{font-family:"JetBrains Mono",monospace;font-weight:500;margin-right:6px}
+.msg{font-size:21px;text-align:center;margin:14px auto 0;max-width:900px}
+@media (max-width:760px){.scen{grid-template-columns:1fr 1fr}}
+@media (max-width:760px){.ctrls{grid-template-columns:1fr 1fr}.hero{height:400px}h1{font-size:30px}}
+.ctrls label{display:flex;justify-content:space-between;font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--mute)}
+.ctrls b{color:var(--ink);font-weight:500}
+input[type=range]{width:100%;accent-color:var(--hlink)}
+.btns{display:flex;gap:6px}
+button{font:12px "JetBrains Mono",monospace;padding:5px 10px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+button:hover{border-color:var(--mute)}
+button.on{background:var(--hl);color:var(--hlink);border-color:var(--hl)}
+.box{background:var(--fill);border:1px solid var(--line);padding:18px 22px;margin:0 0 28px}
+.box h2,.card h2{font-weight:500;font-size:22px;margin:0 0 8px}
+.box h2 small,.card h2 small{font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--mute);font-weight:400}
+.box p{margin:6px 0}.box ul{margin:8px 0 0;padding-left:18px}.box li{margin:4px 0}.box li::marker{color:var(--hlink)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media (max-width:900px){.grid{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);padding:16px}
+.card h2{font-size:20px}.wide{grid-column:1/-1}
+canvas.p{width:100%;height:340px;display:block}
+.cap{font-size:14.5px;color:var(--mute);margin:8px 0 0}
+#nogl{position:absolute;inset:0;display:none;align-items:center;justify-content:center;padding:20px;text-align:center}
+</style>
+</head>
+<body>
+<main>
+<h1><span class="hl">Adam</span> converges: Numerical Illustrations</h1>
+<p class="lede">Companion to Y. Zhang, B. Li, C. Chen, Z.-Q. Luo, R. Sun, <i>Adam Converges Without Any Modification On Update Rules</i> (<a href="https://arxiv.org/abs/2603.02092" style="color:inherit">arXiv:2603.02092</a>). Scenarios ①–③ instantiate results of the paper; ④ is a standard example. Drag to rotate.</p>
+
+<div class="scen">
+  <button data-s="1"><b>①</b>Divergence <span class="mono">Thm 3.6</span></button>
+  <button data-s="2"><b>②</b>Convergence, D₀ = 0 <span class="mono">Thm 3.1</span></button>
+  <button data-s="3"><b>③</b>Neighborhood, D₀ &gt; 0 <span class="mono">Thm 3.4</span></button>
+  <button data-s="4"><b>④</b>Ill-conditioned quadratic <span class="mono">standard example</span></button>
+</div>
+<div class="hero" id="hero">
+  <div class="hud" id="hud"></div>
+  <div class="hud2"><span id="kk"></span></div>
+  <div id="nogl" class="mono">The 3-D view needs WebGL and network access to load three.js.</div>
+</div>
+<p class="msg" id="msg"></p>
+
+<div class="ctrls">
+  <div><label>steps / s<b id="spv"></b></label><input id="sp" type="range" min="10" max="10000" step="10" value="1000"></div>
+  <div class="btns"><button id="play">pause</button><button id="reset">restart</button></div>
+</div>
+
+<div class="grid">
+  <div class="card wide"><h2>Distance to the minimizer, \(\|x-x^*\|\) <small id="xunit"></small></h2><canvas id="cD" class="p" style="height:280px"></canvas></div>
+  <div class="card wide" id="forceCard"><h2>Adam's steps in \(x\) during the last epoch <small>as in Figure 6</small></h2><canvas id="cF" class="p" style="height:230px"></canvas></div>
+  <div class="box" id="setup" style="margin:0"></div>
+  <div class="card" id="phaseCard"><h2>What the theorems say about \((\beta_1,\beta_2)\) <small>n = 10</small></h2><canvas id="cP" class="p"></canvas></div>
+</div>
+</main>
+
+<script type="module">
+let THREE=null,OrbitControls=null;
+try{THREE=await import('three');({OrbitControls}=await import('three/addons/controls/OrbitControls.js'));}catch(e){THREE=null}
+const $=id=>document.getElementById(id);
+const css=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+function rng(s){return()=>{s|=0;s=s+0x6D2B79F5|0;let t=Math.imul(s^s>>>15,1|s);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+
+/* ---------------- scenarios ---------------- */
+const N10=10,aB=i=>i<9?-1:9;
+const fA=(x,y)=>(x*x+y*y)/(2*N10), gA=(i,x,y)=>[i===0?N10*x:-x,y/N10];
+const SC={
+ 1:{n:10,order:'cyc',E:10000,sp:3000,start:[10,8],xr:24,yr:24,F:fA,grad:gA,phase:true,forces:true,
+   runs:[{lab:'Adam',col:'--adam',t:'adam',b1:0,b2:0.2,eta:0.006,sched:'sqrt',vinit:false},{lab:'SGDM',col:'--sgd',t:'sgdm',b1:0,eta:0.006,sched:'sqrt'}],
+   msg:'Adam diverges: \\(|x_{k,0}|\\) grows every epoch (Theorem 3.6). SGDM converges.',
+   setup:`<h2>① Theorem 3.6 counterexample</h2>
+   \\[f_0=\\tfrac{n}{2}x^2+\\tfrac{1}{2n}y^2,\\quad f_i=-\\tfrac12x^2+\\tfrac{1}{2n}y^2\\ (i=1,\\dots,9),\\quad f=\\tfrac{1}{2n}(x^2+y^2),\\quad n=10.\\]
+   <ul><li>\\(D_0=0,\\ D_1=n^2(n^2+n-1)=10900\\).</li>
+   <li>Cyclic order \\(f_0,f_1,\\dots,f_9\\) as in the proof; \\(\\eta_k=0.006/\\sqrt k\\) (\\(k\\) = epoch); \\(m=v=0\\) at start.</li>
+   <li>Adam \\((\\beta_1,\\beta_2)=(0,0.2)\\in R_{10}\\); (C3) needs \\(\\eta_0\\le0.0172\\sqrt{1-\\beta_2}\\), and \\(0.006\\) satisfies it. SGDM: \\(\\beta_1=0\\).</li></ul>`},
+ 2:{n:10,order:'wr',seed:6,E:3000,sp:600,start:[10,8],xr:24,yr:24,F:fA,grad:gA,phase:true,
+   runs:[{lab:'Adam',col:'--adam',t:'adam',b1:0.9,b2:1-1e-7,eta:1.5,sched:'sqrt',vinit:true}],
+   msg:'Adam converges to \\(x^*\\) (Theorem 3.1; \\(D_0=0\\), so no neighborhood term).',
+   setup:`<h2>② Same function, Theorem 3.1 setting</h2>
+   <ul><li>Same \\(f_i\\) as ①: \\(D_0=0\\), so Theorem 3.1 gives \\(\\min_k\\mathbb E\\|\\nabla f(x_k)\\|\\to0\\).</li>
+   <li>Algorithm 1: \\(\\tau_k\\) uniform with replacement; \\(\\eta_k=1.5/\\sqrt k\\).</li>
+   <li>\\((\\beta_1,\\beta_2)=(0.9,\\,1-10^{-7})\\): \\(\\beta_2\\) in the \\(1-O(n^{-5})\\) regime of Theorem 3.1 (its constant \\(c_\\gamma\\) is not explicit). Here \\(v\\) barely changes, so \\(1/\\sqrt{v_k}\\) is nearly constant (Lemma 4.1).</li>
+   <li>\\(v\\) starts at \\(\\tfrac1n\\sum_i\\nabla f_i(x_0)^{\\circ2}\\) (the paper allows \\(v\\succ0\\) initialization).</li></ul>`},
+ 3:{n:10,order:'rr',seed:3,E:3000,sp:600,start:[1.2,-0.9],xr:1.6,yr:1.6,F:(x,y)=>(x*x+y*y)/2,grad:(i,x,y)=>[x-aB(i),y+aB(i)],phase:false,
+   runs:[{lab:'Adam β₂=0.5',col:'--adam',t:'adam',b1:0.9,b2:0.5,eta:0.1,sched:'sqrt',vinit:true,a:1},{lab:'Adam β₂=0.9',col:'--adam',t:'adam',b1:0.9,b2:0.9,eta:0.1,sched:'sqrt',vinit:true,a:.6},{lab:'Adam β₂=0.99',col:'--adam',t:'adam',b1:0.9,b2:0.99,eta:0.1,sched:'sqrt',vinit:true,a:.32}],
+   msg:'With \\(D_0>0\\), Adam stops near \\(x^*\\); the gap shrinks as \\(\\beta_2\\to1\\) (Theorem 3.4).',
+   setup:`<h2>③ A problem with \\(D_0>0\\)</h2>
+   \\[f_i=\\tfrac12(x-a_i)^2+\\tfrac12(y+a_i)^2,\\quad a_1=\\dots=a_9=-1,\\ a_{10}=9,\\quad f=\\tfrac12(x^2+y^2)+\\text{const}.\\]
+   <ul><li>\\(\\sum_i\\|\\nabla f_i\\|^2=n\\|\\nabla f\\|^2+180\\): \\(D_1=10,\\ D_0=180>0\\). At \\(x^*=0\\), \\(\\nabla f=0\\) but each \\(\\nabla f_i\\ne0\\).</li>
+   <li>Algorithm 2 (random reshuffling each epoch), \\(\\beta_1=0.9\\), \\(\\eta_k=0.1/\\sqrt k\\), \\(\\beta_2\\in\\{0.5,0.9,0.99\\}\\).</li>
+   <li>Theorem 3.4: \\(O(\\log T/\\sqrt T)+O(\\tilde\\delta(\\beta_2)\\sqrt{D_0})\\) with \\(\\tilde\\delta\\to0\\) as \\(\\beta_2\\to1\\). The second term is the neighborhood.</li></ul>`},
+ 4:{n:1,order:'cyc',E:1500,sp:40,start:[3,8],xr:12,yr:10,F:(x,y)=>0.5*x*x+0.5e-4*y*y,grad:(i,x,y)=>[x,1e-4*y],phase:false,
+   runs:[{lab:'Adam',col:'--adam',t:'adam',b1:0.9,b2:0.999,eta:0.0363,sched:'const',vinit:false},{lab:'SGDM',col:'--sgd',t:'sgdm',b1:0.9,eta:36.3,sched:'const'}],
+   msg:'Ill-conditioned quadratic: within \\(0.1\\) of \\(x^*\\) after 63 steps (Adam) vs. 1174 steps (SGDM), each with its best constant step size.',
+   setup:`<h2>④ Ill-conditioned quadratic (standard example, not from the paper)</h2>
+   \\[f(x,y)=\\tfrac12x^2+\\tfrac{\\mu}{2}y^2,\\quad \\mu=10^{-4}\\ \\ (\\text{condition number }10^4),\\ \\text{full gradient}.\\]
+   <ul><li>Constant step sizes, \\(\\beta_1=0.9\\) for both, Adam \\(\\beta_2=0.999\\).</li>
+   <li>Each step size is the best of 261 log-spaced values in \\([10^{-3},10^{2.2}]\\), scored by steps until staying within \\(0.1\\) of \\(x^*\\): Adam \\(\\eta=0.0363\\) (63 steps), SGDM \\(\\eta=36.3\\) (1174 steps).</li>
+   <li>SGDM cannot use a larger step: for \\(\\eta>2(1+\\beta_1)/(1-\\beta_1)=38\\) the steep \\(x\\)-direction diverges, so in the flat \\(y\\)-direction it crawls. Adam rescales each coordinate.</li></ul>`}};
+
+/* ---------------- simulation ---------------- */
+let D,S,running=true,cur=1;
+function reset(){D=SC[cur];const n=D.n;
+ S={t:0,acc:0,r:rng(D.seed||1),perm:[...Array(n).keys()],K:D.E*n,
+  st:D.runs.map(R=>{let vx=0,vy=0;if(R.vinit)for(let i=0;i<n;i++){const[g,h]=D.grad(i,...D.start);vx+=g*g/n;vy+=h*h/n}return{x:D.start[0],y:D.start[1],mx:0,my:0,vx,vy}}),
+  tr:D.runs.map(()=>[D.start.slice()]),d:D.runs.map(()=>[Math.hypot(...D.start)]),xs:0,x1:0,F:null};
+ if(window.__resetGL)window.__resetGL();}
+function step(){const n=D.n,t=S.t,k=Math.floor(t/n)+1;
+ if(D.order==='rr'&&t%n===0){const p=S.perm;for(let i=n-1;i>0;i--){const j=Math.floor(S.r()*(i+1));[p[i],p[j]]=[p[j],p[i]]}}
+ const i=D.order==='cyc'?t%n:D.order==='wr'?Math.floor(S.r()*n):S.perm[t%n];
+ if(D.forces&&t%n===0)S.xs=S.st[0].x;
+ D.runs.forEach((R,j)=>{const s=S.st[j],e=R.sched==='sqrt'?R.eta/Math.sqrt(k):R.eta,[g,h]=D.grad(i,s.x,s.y);
+  s.mx=R.b1*s.mx+(1-R.b1)*g;s.my=R.b1*s.my+(1-R.b1)*h;
+  if(R.t==='adam'){s.vx=R.b2*s.vx+(1-R.b2)*g*g;s.vy=R.b2*s.vy+(1-R.b2)*h*h;s.x-=s.vx>0?e*s.mx/Math.sqrt(s.vx):0;s.y-=s.vy>0?e*s.my/Math.sqrt(s.vy):0}
+  else{s.x-=e*s.mx;s.y-=e*s.my}
+  S.tr[j].push([s.x,s.y]);if((t+1)%n===0)S.d[j].push(Math.hypot(s.x,s.y));});
+ if(D.forces){const x=S.st[0].x;if(t%n===0)S.x1=x;if(t%n===n-1){const sg=Math.sign(S.xs)||1;S.F={d0:sg*(S.x1-S.xs),d1:sg*(x-S.x1),k}}}
+ S.t++;}
+
+/* ---------------- theory region R_10 ---------------- */
+function inR(b1,b2){const n=10,L=Math.log(1/(10*n*n))/Math.log(b2),m=Math.min(n-1,L);
+ const lhs=(n-1-m)*(1-Math.pow(b1,m))/Math.sqrt(1+Math.max(0.1,Math.pow(b2,n-1)*n*n)),rhs=(1-b1+n*b1)/Math.sqrt(1-b2);
+ return lhs>=rhs&&(1-Math.pow(b1,n-1)>(1-b1)*Math.pow(b1,n-1)*n)}
+const EN=40,EMP=[];
+function computeEmp(){const n=10,E=2000,M=200;for(let j=0;j<EN;j++){EMP.push([]);for(let i=0;i<EN;i++){const b1=(i+.5)/EN*0.99,b2=(j+.5)/EN;let x=10,m=0,v=0,prev=x,inc=true,dec=true;
+ for(let k=1;k<=E;k++){const e=0.006/Math.sqrt(k);for(let q=0;q<n;q++){const g=q===0?n*x:-x;m=b1*m+(1-b1)*g;v=b2*v+(1-b2)*g*g;x-=v>0?e*m/Math.sqrt(v):0}
+  const a=Math.abs(x);if(k>E-M){if(!(a>prev))inc=false;if(!(a<prev))dec=false}prev=a}
+ EMP[j].push(inc?1:dec?-1:0)}}}
+setTimeout(computeEmp,50);
+const PN=160,B1M=0.99,RG=[];for(let j=0;j<PN;j++){RG.push([]);for(let i=0;i<PN;i++)RG[j].push(inR((i+.5)/PN*B1M,(j+.5)/PN))}
+
+/* ---------------- 3-D ---------------- */
+const hero=$('hero'),WH=24;let renderer,scene,camera,controls,grp=null,heads=[],trails=[],done=[],sx=1,sy=1,zs=1,fmin=0;
+const toW=(x,y,lift=0.12)=>{const cx=Math.max(-D.xr,Math.min(D.xr,x)),cy=Math.max(-D.yr,Math.min(D.yr,y));return new THREE.Vector3(cx*sx,(D.F(cx,cy)-fmin)*zs+lift,cy*sy)};
+function label(text,color,size=1.3){const c=document.createElement('canvas'),x=c.getContext('2d'),fs=56;x.font=`500 ${fs}px "JetBrains Mono",monospace`;
+ c.width=Math.ceil(x.measureText(text).width)+24;c.height=fs+24;x.font=`500 ${fs}px "JetBrains Mono",monospace`;x.fillStyle=color;x.textBaseline='middle';x.fillText(text,12,c.height/2);
+ const t=new THREE.CanvasTexture(c);t.anisotropy=4;const s=new THREE.Sprite(new THREE.SpriteMaterial({map:t,depthTest:false,transparent:true}));s.scale.set(size*c.width/c.height,size,1);s.renderOrder=10;return s}
+function initGL(){
+ if(!THREE){$('nogl').style.display='flex';return}
+ try{renderer=new THREE.WebGLRenderer({antialias:true,alpha:true})}catch(e){$('nogl').style.display='flex';return}
+ renderer.setPixelRatio(Math.min(2,devicePixelRatio));hero.appendChild(renderer.domElement);
+ scene=new THREE.Scene();camera=new THREE.PerspectiveCamera(36,1,0.1,600);camera.position.set(34,30,50);
+ controls=new OrbitControls(camera,renderer.domElement);controls.target.set(0,3,0);controls.enableDamping=true;controls.enableZoom=false;controls.autoRotate=true;controls.autoRotateSpeed=0.4;controls.maxPolarAngle=1.45;
+ new ResizeObserver(()=>{const w=hero.clientWidth,h=hero.clientHeight;renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix()}).observe(hero);}
+function buildScene(){if(!renderer)return;if(grp){scene.remove(grp);grp.traverse(o=>{o.geometry&&o.geometry.dispose();o.material&&o.material.dispose()})}
+ grp=new THREE.Group();scene.add(grp);sx=WH/D.xr;sy=WH/D.yr;
+ const cs=[[D.xr,D.yr],[D.xr,0],[0,D.yr],[0,0]].map(([a,b])=>D.F(a,b));fmin=Math.min(...cs);zs=9/(Math.max(...cs)-fmin);
+ const geo=new THREE.PlaneGeometry(2*WH,2*WH,240,240);geo.rotateX(-Math.PI/2);const p=geo.attributes.position;
+ for(let i=0;i<p.count;i++)p.setY(i,(D.F(p.getX(i)/sx,p.getZ(i)/sy)-fmin)*zs);geo.computeBoundingSphere();
+ const mat=new THREE.ShaderMaterial({transparent:true,side:THREE.DoubleSide,uniforms:{uInk:{value:new THREE.Color(css('--ink'))},uBg:{value:new THREE.Color(css('--card'))}},
+  vertexShader:`varying vec3 vP;void main(){vP=position;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}`,
+  fragmentShader:`uniform vec3 uInk,uBg;varying vec3 vP;float ln(float v,float w){float d=abs(fract(v-.5)-.5)/fwidth(v);return 1.-min(d/w,1.);}
+   void main(){float l=max(ln(vP.z*0.8,1.0),ln(vP.x*0.4,0.8)*0.22);gl_FragColor=vec4(mix(uBg,uInk,l*0.5),0.95);}`});
+ grp.add(new THREE.Mesh(geo,mat));
+ const dm=new THREE.Mesh(new THREE.OctahedronGeometry(0.5),new THREE.MeshBasicMaterial({color:css('--hlink')}));dm.position.copy(toW(0,0,0.5));grp.add(dm);
+ const st=new THREE.Mesh(new THREE.TorusGeometry(0.6,0.1,8,32),new THREE.MeshBasicMaterial({color:css('--ink')}));st.rotation.x=-Math.PI/2;st.position.copy(toW(...D.start,0.15));grp.add(st);
+ const l1=label('x*',css('--hlink'));l1.position.copy(toW(0,0,2.4));grp.add(l1);
+ const l2=label('start',css('--ink'));l2.position.copy(toW(...D.start,2.4));grp.add(l2);
+ heads=[];trails=[];
+ D.runs.forEach(R=>{const col=css(R.col);const h=new THREE.Mesh(new THREE.SphereGeometry(0.55,20,14),new THREE.MeshBasicMaterial({color:col,transparent:true,opacity:R.a??1}));grp.add(h);heads.push(h);
+  const g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.BufferAttribute(new Float32Array((D.E*D.n+1)*3),3));g.setDrawRange(0,1);
+  const ln=new THREE.Line(g,new THREE.LineBasicMaterial({color:col,transparent:true,opacity:0.9*(R.a??1)}));grp.add(ln);trails.push(ln)});
+ window.__resetGL=()=>{trails.forEach(l=>l.geometry.setDrawRange(0,1));done=trails.map(()=>0)};window.__resetGL();}
+function draw3(){if(!renderer||!grp)return;
+ S.tr.forEach((tr,j)=>{const g=trails[j].geometry,a=g.attributes.position,m=tr.length;for(let i=done[j];i<m;i++){const v=toW(tr[i][0],tr[i][1],0.1);a.setXYZ(i,v.x,v.y,v.z)}done[j]=m;a.needsUpdate=true;g.setDrawRange(0,m);heads[j].position.copy(toW(tr[m-1][0],tr[m-1][1],0.55))});
+ controls.update();renderer.render(scene,camera);}
+
+/* ---------------- 2-D panels ---------------- */
+function setup(c){const r=c.getBoundingClientRect(),d=devicePixelRatio||1;c.width=r.width*d;c.height=r.height*d;const x=c.getContext('2d');x.setTransform(d,0,0,d,0,0);return[x,r.width,r.height]}
+const mono=(c,sz=12)=>c.font=`${sz}px "JetBrains Mono",monospace`;
+function drawD(){const[c,w,h]=setup($('cD')),p=30,pl=50,top=16,E=D.E;
+ c.strokeStyle=css('--line');c.lineWidth=1;c.beginPath();c.moveTo(pl,h-p);c.lineTo(w-6,h-p);c.moveTo(pl,6);c.lineTo(pl,h-p);c.stroke();
+ let hi=0;for(const a of S.d)for(const v of a)hi=Math.max(hi,v);hi*=1.08;
+ const X=j=>pl+j/E*(w-pl-110),Y=v=>(h-p)-v/hi*(h-p-top);
+ mono(c);c.fillStyle=css('--mute');c.fillText('0',pl-14,h-p+4);c.fillText(hi.toPrecision(2),4,top+8);c.fillText('0',pl,h-10);c.fillText(String(E),X(E)-20,h-10);
+ const labs=[];S.d.forEach((a,j)=>{const R=D.runs[j];c.globalAlpha=R.a??1;c.strokeStyle=css(R.col);c.lineWidth=1.6;c.beginPath();for(let i=0;i<a.length;i++){const y=Y(a[i]);i?c.lineTo(X(i),y):c.moveTo(X(i),y)}c.stroke();c.globalAlpha=1;
+  const L=a.length-1;labs.push({j,y:Y(a[L])+4,x:X(L)+8,t:`${R.lab}  ${a[L].toPrecision(2)}`})});
+ labs.sort((u,v)=>u.y-v.y);for(let i=1;i<labs.length;i++)labs[i].y=Math.max(labs[i].y,labs[i-1].y+16);
+ const sh=Math.max(0,labs.length?labs[labs.length-1].y-(h-p-4):0);mono(c,13);
+ for(const l of labs){const R=D.runs[l.j];c.globalAlpha=R.a??1;c.fillStyle=css(R.col);c.fillText(l.t,l.x,Math.max(top+8,l.y-sh));c.globalAlpha=1}}
+function drawF(){if(!D.forces)return;const[c,w,h]=setup($('cF')),p=20,W=w-2*p-260;
+ if(!S.F){mono(c);c.fillStyle=css('--mute');c.fillText('waiting for the first epoch',p,40);return}
+ const{d0,d1,k}=S.F,M=Math.max(Math.abs(d0),Math.abs(d1),1e-300),gr=css('--conv'),rd=css('--div');
+ const bar=(y,d,lab)=>{c.globalAlpha=.75;c.fillStyle=d>0?rd:gr;c.fillRect(p,y,Math.max(2,W*Math.abs(d)/M),30);c.globalAlpha=1;c.fillStyle=css('--ink');mono(c,13);c.fillText(`${lab}: ${d>0?'away from':'toward'} 0`,p,y-8)};
+ bar(38,d0,'step on f₀');bar(112,d1,'steps on f₁,…,f₉');
+ const net=d0+d1;c.font='17px "Newsreader",serif';c.fillStyle=net>0?rd:gr;c.fillText(`epoch ${k}: |x| ${net>0?'increased':'decreased'}`,p,180);
+ mono(c,12);c.fillStyle=css('--mute');c.fillText('red: away from 0   green: toward 0',p,206);}
+function drawP(){if(!D.phase)return;const[c,w,h]=setup($('cP')),p=30,W=w-p-10,H=h-p-8;
+ for(let j=0;j<EMP.length;j++)for(let i=0;i<EN;i++){const e=EMP[j][i];if(!e)continue;c.fillStyle=e>0?css('--div'):css('--sgd');c.globalAlpha=.13;c.fillRect(p+i/EN*W,8+(1-(j+1)/EN)*H,W/EN+.6,H/EN+.6)}
+ c.fillStyle=css('--div');c.globalAlpha=.5;
+ for(let j=0;j<PN;j++){let i=0;while(i<PN){if(!RG[j][i]){i++;continue}let e=i;while(e<PN&&RG[j][e])e++;c.fillRect(p+i/PN*W,8+(1-(j+1)/PN)*H,(e-i)/PN*W+.5,H/PN+.5);i=e}}
+ c.fillStyle=css('--sgd');c.globalAlpha=.45;c.fillRect(p,8,W,H*0.06);c.globalAlpha=1;
+ c.strokeStyle=css('--line');c.lineWidth=1;c.beginPath();c.moveTo(p,h-p);c.lineTo(w-6,h-p);c.moveTo(p,6);c.lineTo(p,h-p);c.stroke();
+ c.fillStyle=css('--mute');mono(c,13);c.fillText('β₁',p+W/2,h-6);c.fillText('β₂',2,8+H/2);mono(c);c.fillText('0',p-4,h-p+15);c.fillText(B1M,w-36,h-p+15);c.fillText('0',p-14,h-p+4);c.fillText('1',p-14,16);
+ const R=D.runs[0];c.strokeStyle=css('--ink');c.lineWidth=2.5;c.beginPath();c.arc(p+R.b1/B1M*W,8+(1-Math.min(R.b2,0.985))*H,7,0,7);c.stroke();
+ const it=[[css('--div'),'R₁₀: Thm 3.6 (diverges)'],[css('--sgd'),'Thm 3.1 (converges)'],[css('--div'),'light: simulated, |x| ↑ each epoch',.15],[css('--sgd'),'light: simulated, |x| ↓ each epoch',.15]];
+ mono(c);let y=H*0.3;for(const[col,t,al]of it){const x=p+W*0.12;c.globalAlpha=.92;c.fillStyle=css('--card');c.fillRect(x-6,y-13,c.measureText(t).width+32,19);c.globalAlpha=1;
+  c.fillStyle=col;c.globalAlpha=al??.55;c.fillRect(x,y-10,14,12);c.globalAlpha=1;c.fillStyle=css('--ink');c.fillText(t,x+20,y);y+=21}
+ c.fillStyle=css('--mute');const nx=p+W*0.12+20;c.globalAlpha=.92;c.fillStyle=css('--card');c.fillRect(nx-6,y-16,250,34);c.globalAlpha=1;c.fillStyle=css('--mute');c.fillText('blue band wider than true (≈1−10⁻⁵c_γ)',nx,y-4);c.fillText('simulated: setting ①, 2000 epochs',nx,y+12);}
+function hud(){$('hud').innerHTML=D.runs.map((R,j)=>{const s=S.st[j];return `<div style="color:var(${R.col});opacity:${R.a??1}">● ${R.lab}&nbsp; ‖x − x*‖ = ${Math.hypot(s.x,s.y).toPrecision(3)}</div>`}).join('');
+ $('kk').textContent=D.n>1?`epoch ${Math.floor(S.t/D.n)} / ${D.E}`:`step ${S.t} / ${D.E}`;}
+
+/* ---------------- wiring ---------------- */
+const km=el=>window.renderMathInElement&&renderMathInElement(el,{delimiters:[{left:'\\[',right:'\\]',display:true},{left:'\\(',right:'\\)',display:false}]});
+function choose(id){cur=id;D=SC[id];document.querySelectorAll('[data-s]').forEach(b=>b.classList.toggle('on',+b.dataset.s===id));
+ $('msg').innerHTML=D.msg;$('setup').innerHTML=D.setup;$('phaseCard').style.display=D.phase?'':'none';$('forceCard').style.display=D.forces?'':'none';$('setup').classList.toggle('wide',!D.phase);
+ $('xunit').textContent=D.n>1?'per epoch, linear scale':'per step, linear scale';
+ $('sp').value=D.sp;$('spv').textContent=D.sp;reset();buildScene();km($('msg'));km($('setup'));}
+let last=performance.now();
+function frame(now){const dt=Math.min(0.1,(now-last)/1000);last=now;
+ if(running&&S.t<S.K){S.acc+=dt*(+$('sp').value);while(S.acc>=1&&S.t<S.K){step();S.acc-=1}}
+ draw3();drawD();drawF();drawP();hud();requestAnimationFrame(frame)}
+document.querySelectorAll('[data-s]').forEach(b=>b.onclick=()=>choose(+b.dataset.s));
+$('sp').addEventListener('input',()=>$('spv').textContent=$('sp').value);
+$('play').onclick=()=>{running=!running;$('play').textContent=running?'pause':'play'};
+$('reset').onclick=reset;
+initGL();choose(1);requestAnimationFrame(frame);
+if(document.readyState==='complete')km(document.body);else window.addEventListener('load',()=>km(document.body));
+</script>
+</body>
+</html>

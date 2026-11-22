@@ -306,6 +306,23 @@
   border: 1px solid var(--vp-c-divider);
 }
 
+.pub-card .pub-media {
+  display: block;
+  width: 320px;
+  min-width: 320px;
+  align-self: flex-start;
+}
+
+.pub-card .pub-media video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2 / 1;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+  background: #fbfaf7;
+}
+
 .pub-info {
   flex: 1;
 }
@@ -414,6 +431,11 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+  }
+
+  .pub-card .pub-media {
+    width: 100%;
+    min-width: 0;
   }
 
   .pub-card img {
