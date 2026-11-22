@@ -308,8 +308,8 @@
 
 .pub-card .pub-media {
   display: block;
-  width: 320px;
-  min-width: 320px;
+  width: 420px;
+  min-width: 420px;
   align-self: flex-start;
 }
 
@@ -398,6 +398,19 @@
   background-color: var(--vp-c-brand-soft);
   color: var(--vp-c-brand-1);
   border-radius: 16px;
+}
+
+/* Publication figure: stack below the text on medium screens */
+@media (max-width: 900px) {
+  .pub-card {
+    flex-direction: column;
+  }
+
+  .pub-card .pub-media {
+    width: 100%;
+    max-width: 560px;
+    min-width: 0;
+  }
 }
 
 /* Responsive: mobile */
