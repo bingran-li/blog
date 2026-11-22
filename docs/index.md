@@ -84,6 +84,4 @@ Teaching Assistant at The Chinese University of Hong Kong, Shenzhen:
 
 Beyond mathematics, I find deep resonance in philosophy (Nietzsche, Russell, Zhuangzi), classical music (Bach, Gould, Lang Lang), psychology (Jung), and dance (old school Hip-Hop). I love mathematics for its certainty — it gives definite answers and sharpens my thinking. Philosophy, on the other hand, is what I practice every day: questioning, doubting, and seeking meaning in an uncertain world. Mathematics disciplines the mind; philosophy sets it free.
 
-*相与枕藉乎舟中，不知东方之既白。*
-
 </div>
