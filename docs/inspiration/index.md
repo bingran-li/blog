@@ -1,5 +1,7 @@
 # 📒 Inspiration
 
+![Oil painting](/oil_painting1.jpeg)
+
 ## Bingran's Meditations
 
 Welcome to Bingran Li's Meditations — this is the 📒 **Inspiration** section.

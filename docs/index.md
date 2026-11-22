@@ -11,8 +11,6 @@ pageClass: academic-page
 import { withBase } from 'vitepress'
 </script>
 
-<div class="banner-strip"></div>
-
 <div class="academic-profile">
 
 <div class="profile-header">
