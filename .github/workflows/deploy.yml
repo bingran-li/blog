@@ -11,6 +11,10 @@ on:
   # 允许你从 Actions 选项卡手动运行此工作流程
   workflow_dispatch:
 
+  # Rebuild every 1 January so the footer year stays current
+  schedule:
+    - cron: '0 6 1 1 *'
+
 # 设置 GITHUB_TOKEN 的权限，以允许部署到 GitHub Pages
 permissions:
   contents: read

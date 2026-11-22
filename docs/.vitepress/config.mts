@@ -51,7 +51,7 @@ export default defineConfig({
     ],
 
     footer: {
-      copyright: "Copyright © 2025 Bingran Li"
+      copyright: `Copyright © ${new Date().getFullYear()} Bingran Li`
     },
 
     lastUpdated: {
